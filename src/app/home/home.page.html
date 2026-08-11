@@ -1,0 +1,97 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-content>
+
+  <!-- Decoração superior -->
+  <img
+    class="decoracao-topo"
+    src="assets/images/decoracao-topo.png"
+    alt=""
+  >
+
+  <!-- Decoração inferior -->
+  <img
+    class="decoracao-baixo"
+    src="assets/images/decoracao-baixo.png"
+    alt=""
+  >
+
+  <div class="login-container">
+
+    <!-- Logo -->
+    <div class="logo">
+      <img
+        src="assets/logo/logo-brio.png"
+        alt="Logo BRIO"
+      >
+    </div>
+
+    <!-- Título -->
+    <div class="titulo">
+      <h1>Olá!</h1>
+      <p> Seja Bem-vindo à BRIO!</p>
+    </div>
+
+    <!-- Formulário -->
+    <div class="formulario">
+    
+    <ion-label position="stacked">E-mail ou CPF</ion-label>
+     <ion-item class="campo">
+  <ion-input
+    type="text"
+    placeholder="Digite seu e-mail ou CPF">
+  </ion-input>
+</ion-item>
+
+  <ion-label class="label-campo">
+    Senha
+  </ion-label>
+
+  <ion-item class="campo">
+
+    <ion-input
+      [type]="mostrarSenha ? 'text' : 'password'"
+      placeholder="Digite sua senha">
+    </ion-input>
+
+    <ion-icon
+      slot="end"
+      [name]="mostrarSenha ? 'eye-off-outline' : 'eye-outline'"
+      (click)="mostrarSenha = !mostrarSenha">
+    </ion-icon>
+
+  </ion-item>
+
+      <div class="recuperar">
+        <a href="/recuperar">
+          Esqueci minha senha
+        </a>
+      </div>
+
+      <ion-button expand="block"
+        routerLink="/inicio">
+        Entrar
+      </ion-button>
+
+    </div>
+
+    <!-- Cadastro -->
+    <div class="cadastro">
+      <p>Não possui uma conta?</p>
+
+      <ion-button
+        fill="clear"
+        routerLink="/cadastro">
+        Criar uma conta
+      </ion-button>
+    </div>
+
+  </div>
+
+</ion-content>
+</ion-content>

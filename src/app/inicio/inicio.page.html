@@ -1,0 +1,123 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <ion-header>
+  <ion-toolbar>
+
+    <ion-title>BRIO</ion-title>
+
+    <!-- Configurações e Ajuda -->
+    <ion-buttons slot="end">
+
+      <ion-button>
+        <ion-icon name="settings-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button>
+        <ion-icon name="help-circle-outline"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="inicio-container">
+
+    <!-- Título -->
+    <div class="cabecalho">
+      <h1>Olá!</h1>
+      <p>Bora Estudar?!</p>
+    </div>
+
+
+    <!-- Cartão: Progresso -->
+    <ion-card
+      class="card-menu"
+      routerLink="/progresso">
+
+      <img
+        src="assets/images/progresso.png"
+        alt="Progresso">
+
+      <ion-card-header>
+        <ion-card-title>Progresso</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        Acompanhe sua evolução e seus resultados.
+      </ion-card-content>
+
+    </ion-card>
+
+
+    <!-- Cartão: Play -->
+    <ion-card
+      class="card-menu"
+      routerLink="/play">
+
+      <img
+        src="assets/images/play.png"
+        alt="Play">
+
+      <ion-card-header>
+        <ion-card-title>Play</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        Estude através de exercícios e atividades.
+      </ion-card-content>
+
+    </ion-card>
+
+
+    <!-- Cartão: Loja BRIO -->
+    <ion-card
+      class="card-menu"
+      routerLink="/loja">
+
+      <img
+        src="assets/images/loja.png"
+        alt="Loja BRIO">
+
+      <ion-card-header>
+        <ion-card-title>Loja BRIO</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        Use suas recompensas para desbloquear itens.
+      </ion-card-content>
+
+    </ion-card>
+
+
+    <!-- Cartão: Desafios -->
+    <ion-card
+      class="card-menu"
+      routerLink="/desafios">
+
+      <img
+        src="assets/images/desafios.png"
+        alt="Desafios">
+
+      <ion-card-header>
+        <ion-card-title>Desafios</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        Complete desafios e conquiste XP.
+      </ion-card-content>
+
+    </ion-card>
+
+  </div>
+
+</ion-content>
+</ion-content>
