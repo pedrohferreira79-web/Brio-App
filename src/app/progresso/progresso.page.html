@@ -1,13 +1,297 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>progresso</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">progresso</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <div class="conteudo">
+
+    <!-- PERFIL -->
+    <div class="perfil">
+
+      <div class="informacoes-perfil">
+        <h1>Pedro H.</h1>
+
+        <p class="nivel">Nível 12</p>
+
+        <p class="categoria">
+          Estudante Estratégico
+        </p>
+      </div>
+
+      <div class="foto-perfil">
+        <ion-icon name="person"></ion-icon>
+      </div>
+
+    </div>
+
+
+    <!-- XP -->
+    <div class="xp-card">
+
+      <div class="xp-topo">
+        <span>Experiência</span>
+        <strong>4.850 XP</strong>
+      </div>
+
+      <div class="barra-xp">
+        <div class="xp-atual"></div>
+      </div>
+
+      <div class="xp-info">
+        <span>4.850</span>
+        <span>100.000 XP</span>
+      </div>
+
+    </div>
+
+
+    <!-- RESUMO GERAL -->
+    <h2>Resumo Geral</h2>
+
+    <div class="resumo">
+
+      <div class="item-resumo">
+        <span class="icone">🔥</span>
+
+        <div>
+          <strong>15 dias</strong>
+          <p>Sequência atual</p>
+        </div>
+      </div>
+
+
+      <div class="item-resumo">
+        <span class="icone">📚</span>
+
+        <div>
+          <strong>428</strong>
+          <p>Exercícios concluídos</p>
+        </div>
+      </div>
+
+
+      <div class="item-resumo">
+        <span class="icone">⏱️</span>
+
+        <div>
+          <strong>38h</strong>
+          <p>Tempo estudado</p>
+        </div>
+      </div>
+
+
+      <div class="item-resumo">
+        <span class="icone">🏆</span>
+
+        <div>
+          <strong>27</strong>
+          <p>Conquistas</p>
+        </div>
+      </div>
+
+
+      <div class="item-resumo">
+        <span class="icone">🪙</span>
+
+        <div>
+          <strong>1.250</strong>
+          <p>BRIO Coins</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- CONQUISTAS -->
+    <div class="titulo-secao">
+      <h2>Conquistas</h2>
+
+      <span class="contador">
+        27/35 desbloqueadas
+      </span>
+    </div>
+
+
+    <div class="conquistas">
+
+      <!-- CONQUISTA 1 -->
+      <div class="conquista desbloqueada">
+
+        <div class="medalha azul">
+          🏆
+        </div>
+
+        <strong>Primeiro Passo</strong>
+
+        <p>Complete seu primeiro exercício.</p>
+
+      </div>
+
+
+      <!-- CONQUISTA 2 -->
+      <div class="conquista desbloqueada">
+
+        <div class="medalha amarelo">
+          🔥
+        </div>
+
+        <strong>Constante</strong>
+
+        <p>Estude por 7 dias seguidos.</p>
+
+      </div>
+
+
+      <!-- CONQUISTA 3 -->
+      <div class="conquista desbloqueada">
+
+        <div class="medalha laranja">
+          ⭐
+        </div>
+
+        <strong>Focado</strong>
+
+        <p>Complete 100 exercícios.</p>
+
+      </div>
+
+
+      <!-- CONQUISTA 4 -->
+      <div class="conquista bloqueada">
+
+        <div class="medalha bloqueada-medalha">
+          🔒
+        </div>
+
+        <strong>Imparável</strong>
+
+        <p>Estude por 30 dias seguidos.</p>
+
+      </div>
+
+    </div>
+
+
+    <!-- DESEMPENHO -->
+    <h2>📚 Desempenho por Matéria</h2>
+
+
+    <!-- MATEMÁTICA -->
+    <div class="materia">
+
+      <div class="materia-topo">
+        <span>Matemática</span>
+        <strong>82%</strong>
+      </div>
+
+      <div class="barra-materia">
+        <div class="matematica"></div>
+      </div>
+
+    </div>
+
+
+    <!-- PORTUGUÊS -->
+    <div class="materia">
+
+      <div class="materia-topo">
+        <span>Língua Portuguesa</span>
+        <strong>76%</strong>
+      </div>
+
+      <div class="barra-materia">
+        <div class="portugues"></div>
+      </div>
+
+    </div>
+
+
+    <!-- BIOLOGIA -->
+    <div class="materia">
+
+      <div class="materia-topo">
+        <span>Biologia</span>
+        <strong>68%</strong>
+      </div>
+
+      <div class="barra-materia">
+        <div class="biologia"></div>
+      </div>
+
+    </div>
+
+
+    <!-- HISTÓRIA -->
+    <div class="materia">
+
+      <div class="materia-topo">
+        <span>História</span>
+        <strong>91%</strong>
+      </div>
+
+      <div class="barra-materia">
+        <div class="historia"></div>
+      </div>
+
+    </div>
+
+
+    <!-- PERCURSO -->
+    <h2>Seu percurso</h2>
+
+    <div class="percurso">
+
+      <div class="etapa concluida">
+
+        <div class="bolinha">
+          ✓
+        </div>
+
+        <strong>Iniciante</strong>
+
+      </div>
+
+
+      <div class="linha concluida-linha"></div>
+
+
+      <div class="etapa concluida">
+
+        <div class="bolinha">
+          ✓
+        </div>
+
+        <strong>Constante</strong>
+
+      </div>
+
+
+      <div class="linha"></div>
+
+
+      <div class="etapa atual">
+
+        <div class="bolinha">
+          12
+        </div>
+
+        <strong>Estratégico</strong>
+
+      </div>
+
+
+      <div class="linha"></div>
+
+
+      <div class="etapa bloqueada">
+
+        <div class="bolinha">
+          ?
+        </div>
+
+        <strong>Focado</strong>
+
+      </div>
+
+    </div>
+
+  </div>
 </ion-content>

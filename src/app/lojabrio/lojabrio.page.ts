@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-lojabrio',
   templateUrl: './lojabrio.page.html',
   styleUrls: ['./lojabrio.page.scss'],
+  standalone: false,
 })
 export class LojabrioPage implements OnInit {
 
