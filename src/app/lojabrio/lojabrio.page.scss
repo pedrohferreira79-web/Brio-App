@@ -1,3 +1,7 @@
+/* ==============================
+   FUNDO
+============================== */
+
 ion-content {
   --background: #ffffff;
 }
@@ -9,7 +13,7 @@ ion-content {
 
 .pagina {
   width: 100%;
-  max-width: 700px;
+  max-width: 430px;
 
   margin: 0 auto;
 
@@ -23,10 +27,15 @@ ion-content {
    CABEÇALHO
 ============================== */
 
+.cabecalho {
+  width: 100%;
+}
+
 .cabecalho h1 {
   margin: 0;
 
-  font-size: 36px;
+  font-size: 32px;
+  line-height: 36px;
 
   font-weight: 800;
 
@@ -36,10 +45,9 @@ ion-content {
 .cabecalho p {
   margin: 6px 0 0;
 
-  max-width: 380px;
+  max-width: 360px;
 
-  font-size: 15px;
-
+  font-size: 14px;
   line-height: 18px;
 
   color: #64748b;
@@ -55,20 +63,22 @@ ion-content {
 
   display: grid;
 
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
 
-  gap: 9px;
+  gap: 8px;
 
   margin-top: 20px;
+
+  box-sizing: border-box;
 }
 
 
 .card-estatistica {
   min-width: 0;
 
-  height: 74px;
+  height: 68px;
 
-  padding: 10px;
+  padding: 8px;
 
   box-sizing: border-box;
 
@@ -76,21 +86,21 @@ ion-content {
 
   align-items: center;
 
-  gap: 8px;
+  gap: 6px;
 
   background: #ffffff;
 
   border: 1px solid #e9e3f5;
 
-  border-radius: 14px;
+  border-radius: 13px;
 
-  box-shadow: 0 3px 10px rgba(82, 39, 168, 0.06);
+  box-shadow: 0 3px 10px rgba(82, 39, 168, 0.08);
 }
 
 
 .icone-estatistica {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
 
   flex-shrink: 0;
 
@@ -99,21 +109,22 @@ ion-content {
   align-items: center;
   justify-content: center;
 
-  font-size: 24px;
+  font-size: 21px;
 }
 
 
 .dados-estatistica {
   min-width: 0;
+
+  overflow: hidden;
 }
 
 
 .dados-estatistica span {
   display: block;
 
-  font-size: 11px;
-
-  line-height: 13px;
+  font-size: 9px;
+  line-height: 11px;
 
   color: #64748b;
 }
@@ -124,7 +135,8 @@ ion-content {
 
   margin-top: 2px;
 
-  font-size: 19px;
+  font-size: 17px;
+  line-height: 20px;
 
   white-space: nowrap;
 
@@ -137,21 +149,48 @@ ion-content {
 ============================== */
 
 .titulo-loja {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-top: 28px;
+
+  margin-bottom: 18px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==============================
+   LINHA DA LOGO
+============================== */
+
+.linha-loja {
+  width: 100%;
+
   display: flex;
 
   align-items: center;
 
-  gap: 12px;
+  justify-content: center;
 
-  margin-top: 32px;
+  gap: 6px;
 
-  margin-bottom: 17px;
+  box-sizing: border-box;
 }
 
 
+/* ==============================
+   CARRINHO
+============================== */
+
 .icone-carrinho {
-  width: 55px;
-  height: 55px;
+  width: 32px;
+  height: 32px;
 
   flex-shrink: 0;
 
@@ -160,54 +199,61 @@ ion-content {
   align-items: center;
   justify-content: center;
 
-  font-size: 42px;
+  font-size: 25px;
 }
 
 
-/*
-   ÁREA PARA SUA IMAGEM PERSONALIZADA
-*/
+/* ==============================
+   LOGO BRIO
+============================== */
+
+.imagem-lojabrio {
+  width: 80px !important;
+
+  height: auto !important;
+
+  max-width: 80px !important;
+
+  max-height: 32px !important;
+
+  object-fit: contain;
+
+  display: block;
+
+  flex-shrink: 0;
+}
+
+
+/* ==============================
+   TEXTO ABAIXO DA LOGO
+============================== */
 
 .titulo-personalizado {
-  min-width: 0;
-}
+  width: 100%;
 
+  display: flex;
 
-.titulo-personalizado h2 {
-  margin: 0;
+  flex-direction: column;
 
-  font-size: 36px;
+  align-items: center;
 
-  line-height: 38px;
+  text-align: center;
 
-  font-weight: 700;
-
-  color: #111827;
+  margin-top: 6px;
 }
 
 
 .titulo-personalizado p {
-  margin: 5px 0 0;
+  margin: 0;
 
-  max-width: 290px;
+  max-width: 300px;
 
-  font-size: 13px;
+  font-size: 12px;
 
   line-height: 16px;
 
   color: #64748b;
 }
-
-
-/*
-   CASO VOCÊ COLOQUE UMA IMAGEM:
-
-   .imagem-titulo-loja {
-     width: 210px;
-     height: auto;
-     display: block;
-   }
-*/
 
 
 /* ==============================
@@ -219,26 +265,26 @@ ion-content {
 
   box-sizing: border-box;
 
-  padding: 5px 15px;
+  padding: 4px 14px;
 
   background: #faf8ff;
 
   border: 1px solid #eee9f8;
 
-  border-radius: 18px;
+  border-radius: 17px;
 
   box-shadow: 0 5px 16px rgba(82, 39, 168, 0.08);
 }
 
 
 .categoria {
-  min-height: 63px;
+  min-height: 61px;
 
   display: flex;
 
   align-items: center;
 
-  gap: 12px;
+  gap: 11px;
 
   border-bottom: 1px solid #e7e1ef;
 }
@@ -249,9 +295,13 @@ ion-content {
 }
 
 
+/* ==============================
+   ÍCONE DAS CATEGORIAS
+============================== */
+
 .icone-categoria {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
 
   flex-shrink: 0;
 
@@ -266,7 +316,7 @@ ion-content {
 
   color: #ffffff;
 
-  font-size: 17px;
+  font-size: 16px;
 }
 
 
@@ -280,7 +330,7 @@ ion-content {
 .categoria-texto strong {
   display: block;
 
-  font-size: 14px;
+  font-size: 13px;
 
   color: #111827;
 }
@@ -291,7 +341,9 @@ ion-content {
 
   margin-top: 3px;
 
-  font-size: 11px;
+  font-size: 10px;
+
+  line-height: 13px;
 
   color: #64748b;
 }
@@ -300,7 +352,7 @@ ion-content {
 .seta {
   flex-shrink: 0;
 
-  font-size: 26px;
+  font-size: 23px;
 
   color: #111827;
 }
@@ -311,15 +363,17 @@ ion-content {
 ============================== */
 
 .titulo-destaques {
+  width: 100%;
+
   display: flex;
 
   align-items: center;
 
   justify-content: space-between;
 
-  margin-top: 30px;
+  margin-top: 27px;
 
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 }
 
 
@@ -333,8 +387,8 @@ ion-content {
 
 
 .icone-destaque {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
 
   display: flex;
 
@@ -352,7 +406,7 @@ ion-content {
 .titulo-destaques h2 {
   margin: 0;
 
-  font-size: 21px;
+  font-size: 19px;
 
   color: #111827;
 }
@@ -361,7 +415,7 @@ ion-content {
 .ver-todos {
   color: #5b21b6;
 
-  font-size: 13px;
+  font-size: 12px;
 
   font-weight: 700;
 }
@@ -372,11 +426,13 @@ ion-content {
 ============================== */
 
 .produtos {
+  width: 100%;
+
   display: grid;
 
   grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  gap: 12px;
+  gap: 10px;
 }
 
 
@@ -389,14 +445,18 @@ ion-content {
 
   border: 1px solid #e5e7eb;
 
-  border-radius: 15px;
+  border-radius: 14px;
 
   box-shadow: 0 4px 12px rgba(82, 39, 168, 0.07);
 }
 
 
+/* ==============================
+   IMAGENS DOS PRODUTOS
+============================== */
+
 .imagem-produto {
-  height: 130px;
+  height: 115px;
 
   position: relative;
 
@@ -405,7 +465,7 @@ ion-content {
   align-items: center;
   justify-content: center;
 
-  font-size: 50px;
+  font-size: 45px;
 }
 
 
@@ -449,19 +509,23 @@ ion-content {
 }
 
 
+/* ==============================
+   ETIQUETAS
+============================== */
+
 .etiqueta {
   position: absolute;
 
-  top: 9px;
-  left: 9px;
+  top: 8px;
+  left: 8px;
 
-  padding: 5px 8px;
+  padding: 4px 7px;
 
-  border-radius: 7px;
+  border-radius: 6px;
 
   color: #ffffff;
 
-  font-size: 9px;
+  font-size: 8px;
 
   font-weight: 800;
 }
@@ -487,28 +551,32 @@ ion-content {
 }
 
 
+/* ==============================
+   CONTEÚDO DO PRODUTO
+============================== */
+
 .produto-conteudo {
-  padding: 11px;
+  padding: 10px;
 }
 
 
 .produto-conteudo h3 {
   margin: 0;
 
-  font-size: 15px;
+  font-size: 14px;
 
   color: #111827;
 }
 
 
 .produto-conteudo p {
-  min-height: 34px;
+  min-height: 32px;
 
-  margin: 5px 0 10px;
+  margin: 5px 0 9px;
 
-  font-size: 10px;
+  font-size: 9px;
 
-  line-height: 14px;
+  line-height: 13px;
 
   color: #64748b;
 }
@@ -517,14 +585,14 @@ ion-content {
 .preco {
   color: #5b21b6;
 
-  font-size: 18px;
+  font-size: 17px;
 }
 
 
 .gratis-texto {
   color: #16a34a;
 
-  font-size: 15px;
+  font-size: 14px;
 }
 
 
@@ -538,15 +606,15 @@ ion-content {
   align-items: center;
   justify-content: center;
 
-  gap: 7px;
+  gap: 6px;
 
-  margin: 19px 0;
+  margin: 17px 0;
 }
 
 
 .indicador span {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
 
   border-radius: 50%;
 
@@ -555,7 +623,7 @@ ion-content {
 
 
 .indicador .ativo {
-  width: 20px;
+  width: 18px;
 
   border-radius: 10px;
 
@@ -568,38 +636,44 @@ ion-content {
 ============================== */
 
 .mensagem {
+  width: 100%;
+
   display: flex;
 
   align-items: center;
 
-  gap: 11px;
+  gap: 10px;
 
-  padding: 14px;
+  padding: 13px;
+
+  box-sizing: border-box;
 
   background: #faf7ff;
 
   border: 1px solid #eee8fa;
 
-  border-radius: 15px;
+  border-radius: 14px;
 }
 
 
 .icone-mensagem {
   flex-shrink: 0;
 
-  font-size: 29px;
+  font-size: 27px;
 }
 
 
 .texto-mensagem {
   flex: 1;
+
+  min-width: 0;
 }
 
 
 .texto-mensagem strong {
   display: block;
 
-  font-size: 13px;
+  font-size: 12px;
 
   color: #111827;
 }
@@ -608,14 +682,18 @@ ion-content {
 .texto-mensagem p {
   margin: 4px 0 0;
 
-  font-size: 10px;
+  font-size: 9px;
+
+  line-height: 13px;
 
   color: #64748b;
 }
 
 
 .seta-mensagem {
-  font-size: 26px;
+  flex-shrink: 0;
+
+  font-size: 24px;
 
   color: #5b21b6;
 }
@@ -634,7 +712,7 @@ ion-content {
 
 
   .cabecalho h1 {
-    font-size: 32px;
+    font-size: 29px;
   }
 
 
@@ -644,31 +722,54 @@ ion-content {
 
 
   .card-estatistica {
-    padding: 7px;
+    padding: 6px;
 
     gap: 4px;
   }
 
 
   .icone-estatistica {
-    font-size: 20px;
+    width: 25px;
+    height: 25px;
 
-    width: 27px;
+    font-size: 19px;
   }
 
 
   .dados-estatistica span {
-    font-size: 10px;
+    font-size: 8px;
   }
 
 
   .dados-estatistica strong {
-    font-size: 17px;
+    font-size: 16px;
   }
 
 
-  .titulo-personalizado h2 {
-    font-size: 31px;
+  .imagem-lojabrio {
+    width: 70px !important;
+
+    max-width: 70px !important;
+
+    max-height: 28px !important;
+  }
+
+
+  .icone-carrinho {
+    width: 28px;
+    height: 28px;
+
+    font-size: 23px;
+  }
+
+
+  .categoria {
+    min-height: 58px;
+  }
+
+
+  .produtos {
+    gap: 8px;
   }
 
 }

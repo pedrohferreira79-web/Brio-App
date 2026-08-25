@@ -1,4 +1,3 @@
-
 <ion-content [fullscreen]="true">
 
   <div class="conteudo">
@@ -16,10 +15,9 @@
         </p>
       </div>
 
-      <div class="foto-perfil">
-        <ion-icon name="person"></ion-icon>
-      </div>
-
+   <button class="foto-perfil" routerLink="/fotos-perfil">
+  <ion-icon name="person"></ion-icon>
+   </button>
     </div>
 
 
@@ -104,9 +102,9 @@
     <div class="titulo-secao">
       <h2>Conquistas</h2>
 
-      <span class="contador">
+      <button class="contador" routerLink="/conquistas">
         27/35 desbloqueadas
-      </span>
+      </button>
     </div>
 
 
@@ -294,4 +292,5 @@
     </div>
 
   </div>
+
 </ion-content>

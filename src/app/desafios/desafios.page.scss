@@ -1,0 +1,442 @@
+/* ==============================
+   FUNDO
+============================== */
+
+ion-content {
+  --background: #ffffff;
+}
+
+
+/* ==============================
+   PÁGINA
+============================== */
+
+.pagina-desafios {
+
+  width: 100%;
+  max-width: 430px;
+
+  margin: 0 auto;
+
+  padding: 22px 14px 35px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
+.cabecalho-desafios {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+
+.cabecalho-desafios h1 {
+
+  margin: 0;
+
+  font-size: 32px;
+
+  line-height: 36px;
+
+  font-weight: 800;
+
+  color: #111827;
+}
+
+
+.cabecalho-desafios p {
+
+  margin: 2px 0 0;
+
+  font-size: 13px;
+
+  color: #64748b;
+}
+
+
+/* ==============================
+   ÍCONE DO DESAFIO
+============================== */
+
+.icone-desafio {
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #f3e8ff;
+
+  font-size: 27px;
+
+  box-shadow: 0 4px 10px rgba(91, 33, 182, 0.12);
+}
+
+
+/* ==============================
+   ALUNOS EM DESTAQUE
+============================== */
+
+.destaque {
+
+  padding: 13px 15px;
+
+  background: #faf8ff;
+
+  border: 1px solid #eee8fa;
+
+  border-radius: 15px;
+
+  box-shadow: 0 4px 12px rgba(82, 39, 168, 0.06);
+
+  margin-bottom: 14px;
+}
+
+
+.destaque h2 {
+
+  margin: 0 0 9px;
+
+  font-size: 14px;
+
+  color: #111827;
+}
+
+
+.aluno {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.medalha {
+
+  font-size: 26px;
+}
+
+
+.aluno div {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1px;
+}
+
+
+.aluno strong {
+
+  font-size: 13px;
+
+  color: #5526a8;
+}
+
+
+.aluno small {
+
+  font-size: 11px;
+
+  color: #64748b;
+}
+
+
+/* ==============================
+   DATA
+============================== */
+
+.data-desafio {
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  margin-bottom: 9px;
+}
+
+
+.data-desafio span {
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  background: #f3e8ff;
+
+  color: #5b21b6;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+/* ==============================
+   CARD DO DESAFIO
+============================== */
+
+.card-desafio {
+
+  width: 100%;
+
+  padding: 17px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e7def5;
+
+  border-radius: 18px;
+
+  box-shadow: 0 6px 18px rgba(82, 39, 168, 0.10);
+}
+
+
+/* ==============================
+   TÍTULO
+============================== */
+
+.topo-desafio h2 {
+
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 18px;
+
+  font-weight: 800;
+
+  color: #111827;
+}
+
+
+.topo-desafio p {
+
+  margin: 3px 0 0;
+
+  font-size: 11px;
+
+  color: #64748b;
+}
+
+
+/* ==============================
+   BARRA DE PROGRESSO
+============================== */
+
+.barra-progresso {
+
+  width: 100%;
+
+  height: 6px;
+
+  margin: 12px 0 15px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #ede9fe;
+}
+
+
+.progresso {
+
+  width: 8%;
+
+  height: 100%;
+
+  border-radius: 10px;
+
+  background: #5b21b6;
+}
+
+
+/* ==============================
+   OBJETIVO
+============================== */
+
+.objetivo {
+
+  padding: 10px;
+
+  border-radius: 11px;
+
+  background: #faf8ff;
+
+  border-left: 4px solid #5b21b6;
+
+  margin-bottom: 11px;
+}
+
+
+.objetivo strong {
+
+  display: block;
+
+  font-size: 10px;
+
+  color: #111827;
+}
+
+
+.objetivo p {
+
+  margin: 3px 0 0;
+
+  font-size: 11px;
+
+  line-height: 15px;
+
+  color: #475569;
+}
+
+
+/* ==============================
+   INSTRUÇÃO
+============================== */
+
+.instrucao p {
+
+  margin: 0 0 12px;
+
+  font-size: 11px;
+
+  line-height: 15px;
+
+  color: #374151;
+}
+
+
+/* ==============================
+   ACERTOS
+============================== */
+
+.acertos {
+
+  padding: 10px;
+
+  border-radius: 11px;
+
+  background: #f9f5ff;
+
+  border: 1px solid #eee7f8;
+}
+
+
+.acertos strong {
+
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 12px;
+
+  color: #111827;
+}
+
+
+.acertos p {
+
+  margin: 3px 0;
+
+  font-size: 10px;
+
+  color: #64748b;
+}
+
+
+/* ==============================
+   BOTÃO
+============================== */
+
+.botao-container {
+
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 15px;
+}
+
+
+.botao-entrar {
+
+  --background: #5b21b6;
+
+  --background-activated: #4c1d95;
+
+  --border-radius: 20px;
+
+  --box-shadow: none;
+
+  height: 31px;
+
+  min-width: 78px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (max-width: 360px) {
+
+  .pagina-desafios {
+
+    padding-left: 10px;
+
+    padding-right: 10px;
+  }
+
+
+  .cabecalho-desafios h1 {
+
+    font-size: 29px;
+  }
+
+
+  .icone-desafio {
+
+    width: 43px;
+
+    height: 43px;
+
+    font-size: 24px;
+  }
+
+
+  .card-desafio {
+
+    padding: 14px;
+  }
+
+}

@@ -35,6 +35,18 @@ const routes: Routes = [
     path: 'lojabrio',
     loadChildren: () => import('./lojabrio/lojabrio.module').then( m => m.LojabrioPageModule)
   },
+  {
+    path: 'conquistas',
+    loadChildren: () => import('./conquistas/conquistas.module').then( m => m.ConquistasPageModule)
+  },
+  {
+    path: 'fotos-perfil',
+    loadChildren: () => import('./fotos-perfil/fotos-perfil.module').then( m => m.FotosPerfilPageModule)
+  },
+  {
+    path: 'personalizacao',
+    loadChildren: () => import('./personalizacao/personalizacao.module').then( m => m.PersonalizacaoPageModule)
+  },
 ];
 
 @NgModule({
