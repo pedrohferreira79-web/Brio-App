@@ -1,0 +1,301 @@
+/* ==============================
+   FUNDO DA PÁGINA
+============================== */
+
+ion-content {
+  --background: #f4f7ff;
+}
+
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
+ion-header {
+  background: #ffffff;
+}
+
+ion-toolbar {
+  --background: #ffffff;
+
+  --border-width: 0 0 1px 0;
+  --border-color: #e8e5f2;
+
+  padding: 4px 8px;
+}
+
+
+ion-title {
+  font-size: 24px;
+  font-weight: 800;
+
+  color: #5526a8;
+}
+
+
+ion-button {
+  --color: #5526a8;
+
+  --background-hover: #f0eaff;
+
+  --border-radius: 50%;
+}
+
+
+/* ==============================
+   CONTAINER PRINCIPAL
+============================== */
+
+.inicio-container {
+  width: 100%;
+  max-width: 520px;
+
+  margin: 0 auto;
+
+  padding: 18px 14px 35px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==============================
+   CARTÕES
+============================== */
+
+.card-menu {
+  margin: 0 0 18px 0;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e8e2f5;
+
+  box-shadow:
+    0 6px 18px rgba(82, 39, 168, 0.10);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* Efeito ao passar o mouse */
+
+.card-menu:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 25px rgba(82, 39, 168, 0.18);
+}
+
+
+/* ==============================
+   ÁREA DA IMAGEM
+============================== */
+
+.imagem-card {
+  width: 100%;
+
+  min-height: 190px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #eeeaff;
+}
+
+
+/* ==============================
+   IMAGEM COMPLETA
+============================== */
+
+.imagem-card img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+
+/* Pequena animação sem cortar a imagem */
+
+.card-menu:hover .imagem-card img {
+  transform: scale(1.02);
+
+  filter: brightness(1.05);
+}
+
+
+/* ==============================
+   SETA
+============================== */
+
+.seta-card {
+  position: absolute;
+
+  right: 15px;
+  bottom: 15px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(91, 33, 182, 0.95);
+
+  color: #ffffff;
+
+  font-size: 22px;
+
+  opacity: 0;
+
+  transform: translateX(-10px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Seta aparece no hover */
+
+.card-menu:hover .seta-card {
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+
+/* ==============================
+   TÍTULO DO CARD
+============================== */
+
+ion-card-header {
+  padding: 15px 15px 5px;
+
+  text-align: center;
+}
+
+
+ion-card-title {
+  font-size: 23px;
+
+  font-weight: 800;
+
+  color: #111827;
+
+  text-align: center;
+}
+
+
+/* ==============================
+   DESCRIÇÃO
+============================== */
+
+ion-card-content {
+  padding: 5px 18px 18px;
+
+  font-size: 14px;
+
+  line-height: 20px;
+
+  color: #64748b;
+
+  text-align: center;
+}
+
+
+/* ==============================
+   EFEITO DE TOQUE
+============================== */
+
+.card-menu:active {
+  transform: scale(0.98);
+
+  box-shadow:
+    0 4px 10px rgba(82, 39, 168, 0.12);
+}
+
+
+/* ==============================
+   CELULAR
+============================== */
+
+@media (max-width: 480px) {
+
+  .inicio-container {
+    padding: 14px 12px 30px;
+  }
+
+
+  .imagem-card {
+    min-height: 180px;
+  }
+
+
+  ion-card-title {
+    font-size: 21px;
+  }
+
+
+  ion-card-content {
+    font-size: 13px;
+
+    line-height: 18px;
+  }
+
+}
+
+
+/* ==============================
+   TELAS MUITO PEQUENAS
+============================== */
+
+@media (max-width: 360px) {
+
+  .imagem-card {
+    min-height: 155px;
+  }
+
+
+  ion-title {
+    font-size: 21px;
+  }
+
+
+  ion-card-title {
+    font-size: 19px;
+  }
+
+
+  ion-card-content {
+    font-size: 12px;
+  }
+
+}

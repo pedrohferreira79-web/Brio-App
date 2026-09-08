@@ -1,0 +1,166 @@
+ion-content {
+  --background: #ffffff;
+}
+
+/* =========================
+   PÁGINA
+========================= */
+
+.pagina {
+  width: 100%;
+  max-width: 500px;
+
+  margin: 0 auto;
+
+  padding: 25px 16px 35px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+h1 {
+  margin: 0;
+
+  font-size: 32px;
+  font-weight: 800;
+
+  color: #111827;
+}
+
+.subtitulo {
+  margin: 5px 0 25px;
+
+  font-size: 14px;
+
+  color: #64748b;
+}
+
+
+/* =========================
+   GRID DE MATÉRIAS
+========================= */
+
+.materias {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+}
+
+
+/* =========================
+   CARTÃO
+========================= */
+
+.materia {
+  height: 125px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  text-decoration: none;
+
+  background: #faf7ff;
+
+  border: 1px solid #e8ddf7;
+
+  border-radius: 16px;
+
+  box-shadow: 0 4px 10px rgba(91, 33, 182, 0.08);
+
+  transition: 0.2s;
+}
+
+
+/* =========================
+   ÍCONE
+========================= */
+
+.icone {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #5b21b6;
+
+  font-size: 30px;
+
+  box-shadow: 0 4px 8px rgba(91, 33, 182, 0.2);
+}
+
+
+/* =========================
+   NOME DA MATÉRIA
+========================= */
+
+.materia span {
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-align: center;
+
+  color: #111827;
+}
+
+
+/* =========================
+   EFEITO AO CLICAR
+========================= */
+
+.materia:active {
+  transform: scale(0.95);
+
+  background: #f0e9ff;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 360px) {
+
+  .pagina {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .materias {
+    gap: 9px;
+  }
+
+  .materia {
+    height: 110px;
+  }
+
+  .icone {
+    width: 50px;
+    height: 50px;
+
+    font-size: 25px;
+  }
+
+  .materia span {
+    font-size: 10px;
+  }
+
+}

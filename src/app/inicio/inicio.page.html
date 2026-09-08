@@ -1,6 +1,4 @@
-
-<ion-content [fullscreen]="true">
- <ion-header>
+<ion-header>
   <ion-toolbar>
 
     <ion-title>BRIO</ion-title>
@@ -22,7 +20,7 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content [fullscreen]="true">
 
   <div class="inicio-container">
 
@@ -31,9 +29,15 @@
       class="card-menu"
       routerLink="/progresso">
 
-      <img
-        src="assets/images/progresso.png"
-        alt="Progresso">
+      <div class="imagem-card">
+        <img
+          src="assets/progresso.png"
+          alt="Progresso">
+
+        <div class="seta-card">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+      </div>
 
       <ion-card-header>
         <ion-card-title>Progresso</ion-card-title>
@@ -51,9 +55,15 @@
       class="card-menu"
       routerLink="/jogar">
 
-      <img
-        src="assets/images/play.png"
-        alt="Play">
+      <div class="imagem-card">
+        <img
+          src="assets/play.png"
+          alt="Play">
+
+        <div class="seta-card">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+      </div>
 
       <ion-card-header>
         <ion-card-title>Play</ion-card-title>
@@ -71,9 +81,15 @@
       class="card-menu"
       routerLink="/lojabrio">
 
-      <img
-        src="assets/images/loja.png"
-        alt="Loja BRIO">
+      <div class="imagem-card">
+        <img
+          src="assets/loja.png"
+          alt="Loja BRIO">
+
+        <div class="seta-card">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+      </div>
 
       <ion-card-header>
         <ion-card-title>Loja BRIO</ion-card-title>
@@ -91,9 +107,15 @@
       class="card-menu"
       routerLink="/desafios">
 
-      <img
-        src="assets/images/desafios.png"
-        alt="Desafios">
+      <div class="imagem-card">
+        <img
+          src="assets/desafios.png"
+          alt="Desafios">
+
+        <div class="seta-card">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+      </div>
 
       <ion-card-header>
         <ion-card-title>Desafios</ion-card-title>
@@ -107,5 +129,4 @@
 
   </div>
 
-</ion-content>
 </ion-content>

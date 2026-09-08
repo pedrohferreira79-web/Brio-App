@@ -12,10 +12,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },
-  {
     path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
@@ -46,6 +42,50 @@ const routes: Routes = [
   {
     path: 'personalizacao',
     loadChildren: () => import('./personalizacao/personalizacao.module').then( m => m.PersonalizacaoPageModule)
+  },
+  {
+    path: 'cadastro',
+    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
+  },
+  {
+    path: 'matematica',
+    loadChildren: () => import('./matematica/matematica.module').then( m => m.MatematicaPageModule)
+  },
+  {
+    path: 'portugues',
+    loadChildren: () => import('./portugues/portugues.module').then( m => m.PortuguesPageModule)
+  },
+  {
+    path: 'biologia',
+    loadChildren: () => import('./biologia/biologia.module').then( m => m.BiologiaPageModule)
+  },
+  {
+    path: 'geografia',
+    loadChildren: () => import('./geografia/geografia.module').then( m => m.GeografiaPageModule)
+  },
+  {
+    path: 'fisica',
+    loadChildren: () => import('./fisica/fisica.module').then( m => m.FisicaPageModule)
+  },
+  {
+    path: 'quimica',
+    loadChildren: () => import('./quimica/quimica.module').then( m => m.QuimicaPageModule)
+  },
+  {
+    path: 'ingles',
+    loadChildren: () => import('./ingles/ingles.module').then( m => m.InglesPageModule)
+  },
+  {
+    path: 'filosofia',
+    loadChildren: () => import('./filosofia/filosofia.module').then( m => m.FilosofiaPageModule)
+  },
+  {
+    path: 'historia',
+    loadChildren: () => import('./historia/historia.module').then( m => m.HistoriaPageModule)
+  },
+  {
+    path: 'artes',
+    loadChildren: () => import('./artes/artes.module').then( m => m.ArtesPageModule)
   },
 ];
 
