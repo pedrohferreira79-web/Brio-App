@@ -1,13 +1,147 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>portugues</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">portugues</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="pagina">
+
+    <!-- CABEÇALHO -->
+    <div class="cabecalho">
+
+      <div class="titulo-materia">
+        <h1>Língua Portuguesa</h1>
+        <p>Nível Intermediário</p>
+        <span>XP da matéria: 980</span>
+      </div>
+
+      <!-- PROGRESSO -->
+      <div class="progresso-materia">
+        <div class="circulo-progresso">
+          <strong>38%</strong>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- PESQUISA -->
+    <div class="barra-pesquisa">
+
+      <ion-icon name="search-outline"></ion-icon>
+
+      <ion-input
+        type="text"
+        placeholder="Buscar assunto">
+      </ion-input>
+
+    </div>
+
+
+    <!-- TÍTULO -->
+    <h2 class="titulo-conteudos">
+      Conteúdos disponíveis
+    </h2>
+
+
+    <!-- CARDS -->
+    <div class="cards-assuntos">
+
+
+      <!-- GRAMÁTICA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-gramatica">
+
+        <div class="imagem-card gramatica">
+          <ion-icon name="text-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Gramática
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Classes gramaticais, concordância e regras da língua.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 questões</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- INTERPRETAÇÃO DE TEXTO -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-interpretacao">
+
+        <div class="imagem-card interpretacao">
+          <ion-icon name="book-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Interpretação de Texto
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Compreensão, análise e interpretação de diferentes textos.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 questões</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- LITERATURA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-literatura">
+
+        <div class="imagem-card literatura">
+          <ion-icon name="library-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Literatura
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Escolas literárias, autores, obras e características.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 questões</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+    </div>
+
+  </div>
+
 </ion-content>

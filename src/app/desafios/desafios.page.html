@@ -2,108 +2,270 @@
 
   <div class="pagina-desafios">
 
-    <!-- TÍTULO -->
+    <!-- ==============================
+         CABEÇALHO
+    =============================== -->
+
     <div class="cabecalho-desafios">
 
-      <div class="icone-desafio">
+      <div class="icone-titulo">
         🏅
       </div>
 
       <div>
         <h1>Desafios</h1>
-        <p>Desafios concluídos: 0/1</p>
+        <p>Desafios concluídos: 0/3</p>
       </div>
 
     </div>
 
 
-    <!-- ALUNOS EM DESTAQUE -->
+    <!-- ==============================
+         ALUNOS EM DESTAQUE
+    =============================== -->
+
     <div class="destaque">
 
-      <h2>🏆 Alunos em Destaque:</h2>
+      <div class="titulo-destaque">
+        🏆 Alunos em Destaque:
+      </div>
 
-      <div class="aluno">
-        <span class="medalha">🥇</span>
+      <div class="ranking">
 
-        <div>
-          <strong>1º João</strong>
-          <small>2º Pedro</small>
-          <small>3º Ana</small>
+        <div class="posicao primeiro">
+          🥇
+          <div>
+            <strong>1º João</strong>
+            <span>120 XP</span>
+          </div>
         </div>
+
+        <div class="posicao">
+          🥈
+          <div>
+            <strong>2º Pedro</strong>
+            <span>100 XP</span>
+          </div>
+        </div>
+
+        <div class="posicao">
+          🥉
+          <div>
+            <strong>3º Ana</strong>
+            <span>80 XP</span>
+          </div>
+        </div>
+
       </div>
 
     </div>
 
 
-    <!-- DATA -->
-    <div class="data-desafio">
-      <span>Termina em 22/06</span>
+    <!-- ==============================
+         PRAZO
+    =============================== -->
+
+    <div class="prazo">
+      Termina em 22/06
     </div>
 
 
-    <!-- DESAFIO -->
-    <div class="card-desafio">
+    <!-- ==============================
+         DESAFIO - PORTUGUÊS
+    =============================== -->
 
-      <div class="topo-desafio">
+    <ion-card class="card-desafio portugues">
+
+      <div class="topo-card">
+
+        <div class="icone-materia">
+          📖
+        </div>
 
         <div>
-          <h2>📖 DESAFIO DE LÍNGUA PORTUGUESA</h2>
+          <h2>DESAFIO DE LÍNGUA PORTUGUESA</h2>
           <p>Missão: Sistema de Interpretação</p>
         </div>
 
       </div>
 
 
-      <!-- PROGRESSO -->
+      <!-- BARRA DE PROGRESSO -->
+
       <div class="barra-progresso">
-        <div class="progresso"></div>
+        <div class="progresso" style="width: 8%;"></div>
       </div>
 
 
       <!-- OBJETIVO -->
+
       <div class="objetivo">
 
         <strong>OBJETIVO:</strong>
 
         <p>
-          Demonstrar a capacidade de compreender informações presentes em um texto.
+          Demonstrar a capacidade de compreender informações
+          presentes em um texto.
         </p>
 
       </div>
 
 
-      <!-- INSTRUÇÃO -->
-      <div class="instrucao">
-
-        <p>
-          Leia atentamente o texto abaixo e responda às questões.
-        </p>
-
-      </div>
+      <p class="instrucao">
+        Leia atentamente o texto abaixo e responda às questões.
+      </p>
 
 
-      <!-- ACERTOS -->
-      <div class="acertos">
+      <!-- RECOMPENSA -->
+
+      <div class="recompensa">
 
         <strong>100% de acertos:</strong>
 
-        <p>🏅 Medalha: Leitor Atento</p>
+        <span>🏅 Medalha: Leitor Atento</span>
 
-        <p>✨ +100 XP</p>
+        <span>✨ +100 XP</span>
+
+      </div>
+
+
+      <ion-button
+        class="btn-entrar"
+        routerLink="/desafio-portugues">
+
+        ENTRAR
+
+      </ion-button>
+
+    </ion-card>
+
+
+    <!-- ==============================
+         DESAFIO - MATEMÁTICA
+    =============================== -->
+
+    <ion-card class="card-desafio matematica">
+
+      <div class="topo-card">
+
+        <div class="icone-materia">
+          📐
+        </div>
+
+        <div>
+          <h2>DESAFIO DE MATEMÁTICA</h2>
+          <p>Missão: Função do 2º Grau</p>
+        </div>
 
       </div>
 
 
-      <!-- BOTÃO -->
-      <div class="botao-container">
+      <div class="barra-progresso">
+        <div class="progresso" style="width: 0%;"></div>
+      </div>
 
-        <ion-button class="botao-entrar">
-          ENTRAR
-        </ion-button>
+
+      <div class="objetivo">
+
+        <strong>OBJETIVO:</strong>
+
+        <p>
+          Resolver questões envolvendo funções do segundo grau
+          e interpretar seus resultados.
+        </p>
 
       </div>
 
-    </div>
+
+      <p class="instrucao">
+        Resolva os exercícios e encontre as respostas corretas.
+      </p>
+
+
+      <div class="recompensa">
+
+        <strong>100% de acertos:</strong>
+
+        <span>🏅 Medalha: Mestre da Matemática</span>
+
+        <span>✨ +120 XP</span>
+
+      </div>
+
+
+      <ion-button
+        class="btn-entrar"
+        routerLink="/desafio-matematica">
+
+        ENTRAR
+
+      </ion-button>
+
+    </ion-card>
+
+
+    <!-- ==============================
+         DESAFIO - FÍSICA
+    =============================== -->
+
+    <ion-card class="card-desafio fisica">
+
+      <div class="topo-card">
+
+        <div class="icone-materia">
+          ⚡
+        </div>
+
+        <div>
+          <h2>DESAFIO DE FÍSICA</h2>
+          <p>Missão: Leis de Newton</p>
+        </div>
+
+      </div>
+
+
+      <div class="barra-progresso">
+        <div class="progresso" style="width: 0%;"></div>
+      </div>
+
+
+      <div class="objetivo">
+
+        <strong>OBJETIVO:</strong>
+
+        <p>
+          Identificar e aplicar as Leis de Newton em situações
+          do cotidiano.
+        </p>
+
+      </div>
+
+
+      <p class="instrucao">
+        Analise cada situação e responda às questões propostas.
+      </p>
+
+
+      <div class="recompensa">
+
+        <strong>100% de acertos:</strong>
+
+        <span>🏅 Medalha: Explorador da Física</span>
+
+        <span>✨ +120 XP</span>
+
+      </div>
+
+
+      <ion-button
+        class="btn-entrar"
+        routerLink="/desafio-fisica">
+
+        ENTRAR
+
+      </ion-button>
+
+    </ion-card>
 
   </div>
 

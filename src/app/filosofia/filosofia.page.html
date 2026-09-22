@@ -1,13 +1,147 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>filosofia</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">filosofia</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="pagina">
+
+    <!-- CABEÇALHO -->
+    <div class="cabecalho">
+
+      <div class="titulo-materia">
+        <h1>Filosofia</h1>
+        <p>Nível Intermediário</p>
+        <span>XP da matéria: 860</span>
+      </div>
+
+      <!-- PROGRESSO -->
+      <div class="progresso-materia">
+        <div class="circulo-progresso">
+          <strong>32%</strong>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- PESQUISA -->
+    <div class="barra-pesquisa">
+
+      <ion-icon name="search-outline"></ion-icon>
+
+      <ion-input
+        type="text"
+        placeholder="Buscar assunto">
+      </ion-input>
+
+    </div>
+
+
+    <!-- TÍTULO -->
+    <h2 class="titulo-conteudos">
+      Conteúdos disponíveis
+    </h2>
+
+
+    <!-- CARDS -->
+    <div class="cards-assuntos">
+
+
+      <!-- ÉTICA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-etica">
+
+        <div class="imagem-card etica">
+          <ion-icon name="people-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Ética
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Moral, valores, comportamento e reflexões sobre a vida.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- FILOSOFIA POLÍTICA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-filosofia-politica">
+
+        <div class="imagem-card politica">
+          <ion-icon name="scale-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Filosofia Política
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Estado, poder, sociedade, justiça e organização política.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- FILOSOFIA ANTIGA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-filosofia-antiga">
+
+        <div class="imagem-card antiga">
+          <ion-icon name="library-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Filosofia Antiga
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Sócrates, Platão, Aristóteles e os principais pensamentos antigos.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+    </div>
+
+  </div>
+
 </ion-content>

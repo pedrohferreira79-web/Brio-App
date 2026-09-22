@@ -1,13 +1,147 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>historia</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">historia</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="pagina">
+
+    <!-- CABEÇALHO -->
+    <div class="cabecalho">
+
+      <div class="titulo-materia">
+        <h1>História</h1>
+        <p>Nível Intermediário</p>
+        <span>XP da matéria: 980</span>
+      </div>
+
+      <!-- PROGRESSO -->
+      <div class="progresso-materia">
+        <div class="circulo-progresso">
+          <strong>35%</strong>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- PESQUISA -->
+    <div class="barra-pesquisa">
+
+      <ion-icon name="search-outline"></ion-icon>
+
+      <ion-input
+        type="text"
+        placeholder="Buscar assunto">
+      </ion-input>
+
+    </div>
+
+
+    <!-- TÍTULO -->
+    <h2 class="titulo-conteudos">
+      Conteúdos disponíveis
+    </h2>
+
+
+    <!-- CARDS -->
+    <div class="cards-assuntos">
+
+
+      <!-- BRASIL COLÔNIA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-brasil-colonia">
+
+        <div class="imagem-card colonia">
+          <ion-icon name="business-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Brasil Colônia
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Colonização, economia, sociedade e escravidão no Brasil.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- BRASIL REPÚBLICA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-brasil-republica">
+
+        <div class="imagem-card republica">
+          <ion-icon name="flag-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Brasil República
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          República, Era Vargas, ditadura militar e redemocratização.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- HISTÓRIA MUNDIAL -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-historia-mundial">
+
+        <div class="imagem-card mundial">
+          <ion-icon name="globe-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            História Mundial
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Antiguidade, guerras, revoluções e acontecimentos mundiais.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+    </div>
+
+  </div>
+
 </ion-content>

@@ -1,13 +1,147 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>artes</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">artes</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="pagina">
+
+    <!-- CABEÇALHO -->
+    <div class="cabecalho">
+
+      <div class="titulo-materia">
+        <h1>Artes</h1>
+        <p>Nível Intermediário</p>
+        <span>XP da matéria: 920</span>
+      </div>
+
+      <!-- PROGRESSO -->
+      <div class="progresso-materia">
+        <div class="circulo-progresso">
+          <strong>38%</strong>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- PESQUISA -->
+    <div class="barra-pesquisa">
+
+      <ion-icon name="search-outline"></ion-icon>
+
+      <ion-input
+        type="text"
+        placeholder="Buscar assunto">
+      </ion-input>
+
+    </div>
+
+
+    <!-- TÍTULO -->
+    <h2 class="titulo-conteudos">
+      Conteúdos disponíveis
+    </h2>
+
+
+    <!-- CARDS -->
+    <div class="cards-assuntos">
+
+
+      <!-- ARTES VISUAIS -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-artes-visuais">
+
+        <div class="imagem-card visuais">
+          <ion-icon name="color-palette-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Artes Visuais
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Pintura, desenho, escultura, fotografia e movimentos artísticos.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- MÚSICA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-musica">
+
+        <div class="imagem-card musica">
+          <ion-icon name="musical-notes-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Música
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Ritmo, instrumentos, gêneros musicais e história da música.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- TEATRO -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-teatro">
+
+        <div class="imagem-card teatro">
+          <ion-icon name="happy-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Teatro
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Dramaturgia, personagens, encenação e história do teatro.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+    </div>
+
+  </div>
+
 </ion-content>

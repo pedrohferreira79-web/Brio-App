@@ -1,13 +1,147 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>ingles</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">ingles</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="pagina">
+
+    <!-- CABEÇALHO -->
+    <div class="cabecalho">
+
+      <div class="titulo-materia">
+        <h1>Inglês</h1>
+        <p>Nível Intermediário</p>
+        <span>XP da matéria: 1.240</span>
+      </div>
+
+      <!-- PROGRESSO -->
+      <div class="progresso-materia">
+        <div class="circulo-progresso">
+          <strong>44%</strong>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- PESQUISA -->
+    <div class="barra-pesquisa">
+
+      <ion-icon name="search-outline"></ion-icon>
+
+      <ion-input
+        type="text"
+        placeholder="Buscar assunto">
+      </ion-input>
+
+    </div>
+
+
+    <!-- TÍTULO -->
+    <h2 class="titulo-conteudos">
+      Conteúdos disponíveis
+    </h2>
+
+
+    <!-- CARDS -->
+    <div class="cards-assuntos">
+
+
+      <!-- GRAMMAR -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-grammar">
+
+        <div class="imagem-card grammar">
+          <ion-icon name="chatbubble-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Grammar
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Tempos verbais, pronomes, preposições e estrutura das frases.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- READING -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-reading">
+
+        <div class="imagem-card reading">
+          <ion-icon name="book-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Reading
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Leitura, compreensão e interpretação de textos em inglês.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- VOCABULARY -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-vocabulary">
+
+        <div class="imagem-card vocabulary">
+          <ion-icon name="language-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Vocabulary
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Palavras, expressões, significados e uso do vocabulário.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+    </div>
+
+  </div>
+
 </ion-content>

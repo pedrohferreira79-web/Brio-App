@@ -1,13 +1,147 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>quimica</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">quimica</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="pagina">
+
+    <!-- CABEÇALHO -->
+    <div class="cabecalho">
+
+      <div class="titulo-materia">
+        <h1>Química</h1>
+        <p>Nível Intermediário</p>
+        <span>XP da matéria: 1.020</span>
+      </div>
+
+      <!-- PROGRESSO -->
+      <div class="progresso-materia">
+        <div class="circulo-progresso">
+          <strong>37%</strong>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- PESQUISA -->
+    <div class="barra-pesquisa">
+
+      <ion-icon name="search-outline"></ion-icon>
+
+      <ion-input
+        type="text"
+        placeholder="Buscar assunto">
+      </ion-input>
+
+    </div>
+
+
+    <!-- TÍTULO -->
+    <h2 class="titulo-conteudos">
+      Conteúdos disponíveis
+    </h2>
+
+
+    <!-- CARDS -->
+    <div class="cards-assuntos">
+
+
+      <!-- QUÍMICA GERAL -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-quimica-geral">
+
+        <div class="imagem-card quimica-geral">
+          <ion-icon name="flask-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Química Geral
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Átomos, elementos, tabela periódica e ligações químicas.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- QUÍMICA ORGÂNICA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-quimica-organica">
+
+        <div class="imagem-card organica">
+          <ion-icon name="git-branch-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Química Orgânica
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Carbono, funções orgânicas, cadeias e principais compostos.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- FÍSICO-QUÍMICA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-fisico-quimica">
+
+        <div class="imagem-card fisico-quimica">
+          <ion-icon name="thermometer-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Físico-Química
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Reações, energia, velocidade das reações e equilíbrio químico.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+    </div>
+
+  </div>
+
 </ion-content>

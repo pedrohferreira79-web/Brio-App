@@ -1,13 +1,147 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>fisica</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">fisica</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="pagina">
+
+    <!-- CABEÇALHO -->
+    <div class="cabecalho">
+
+      <div class="titulo-materia">
+        <h1>Física</h1>
+        <p>Nível Intermediário</p>
+        <span>XP da matéria: 1.150</span>
+      </div>
+
+      <!-- PROGRESSO -->
+      <div class="progresso-materia">
+        <div class="circulo-progresso">
+          <strong>40%</strong>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- PESQUISA -->
+    <div class="barra-pesquisa">
+
+      <ion-icon name="search-outline"></ion-icon>
+
+      <ion-input
+        type="text"
+        placeholder="Buscar assunto">
+      </ion-input>
+
+    </div>
+
+
+    <!-- TÍTULO -->
+    <h2 class="titulo-conteudos">
+      Conteúdos disponíveis
+    </h2>
+
+
+    <!-- CARDS -->
+    <div class="cards-assuntos">
+
+
+      <!-- MECÂNICA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-mecanica">
+
+        <div class="imagem-card mecanica">
+          <ion-icon name="speedometer-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Mecânica
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Movimento, velocidade, força, trabalho e energia.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- TERMOLOGIA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-termologia">
+
+        <div class="imagem-card termologia">
+          <ion-icon name="thermometer-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Termologia
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Temperatura, calor, escalas térmicas e mudanças de estado.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- ELETRICIDADE -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-eletricidade">
+
+        <div class="imagem-card eletricidade">
+          <ion-icon name="flash-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Eletricidade
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Corrente elétrica, tensão, resistência e circuitos.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+    </div>
+
+  </div>
+
 </ion-content>

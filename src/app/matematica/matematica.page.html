@@ -1,156 +1,140 @@
-<ion-content [fullscreen]="true">
+<ion-content>
 
-  <div class="pagina-materia">
+  <div class="pagina">
 
-    <!-- CABEÇALHO DA MATÉRIA -->
-    <div class="cabecalho-materia">
+    <!-- CABEÇALHO -->
+    <div class="cabecalho">
 
-      <div class="informacoes-materia">
-
+      <div class="titulo-materia">
         <h1>Matemática</h1>
-
-        <p>Nível intermediário</p>
-
+        <p>Nível Intermediário</p>
         <span>XP da matéria: 1.250</span>
-
       </div>
 
-
       <!-- PROGRESSO -->
-      <div class="progresso-circular">
-
-        <div class="circulo">
+      <div class="progresso-materia">
+        <div class="circulo-progresso">
           <strong>46%</strong>
         </div>
-
       </div>
 
     </div>
 
 
-    <!-- BUSCA -->
-    <div class="barra-busca">
-
-      <ion-icon name="menu-outline"></ion-icon>
-
-      <input
-        type="text"
-        placeholder="Buscar conteúdo">
+    <!-- PESQUISA -->
+    <div class="barra-pesquisa">
 
       <ion-icon name="search-outline"></ion-icon>
 
+      <ion-input
+        type="text"
+        placeholder="Buscar assunto">
+      </ion-input>
+
     </div>
 
 
-    <!-- CONTEÚDOS -->
-    <section class="conteudos">
+    <!-- TÍTULO -->
+    <h2 class="titulo-conteudos">
+      Conteúdos disponíveis
+    </h2>
 
-      <h2>Conteúdos disponíveis</h2>
+
+    <!-- CARDS -->
+    <div class="cards-assuntos">
 
 
       <!-- ÁLGEBRA -->
-      <div class="categoria">
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-algebra">
 
-        <h3>
-          🧮 Álgebra
-        </h3>
-
-
-        <div class="lista-conteudos">
-
-          <button class="conteudo">
-
-            <span>
-              <ion-icon name="add-circle-outline"></ion-icon>
-              Equação do 1º grau
-            </span>
-
-            <ion-icon
-              class="seta"
-              name="chevron-forward-outline">
-            </ion-icon>
-
-          </button>
-
-
-          <button class="conteudo">
-
-            <span>
-              <ion-icon name="add-circle-outline"></ion-icon>
-              Equação do 2º grau
-            </span>
-
-            <ion-icon
-              class="seta"
-              name="chevron-forward-outline">
-            </ion-icon>
-
-          </button>
-
-
-          <button class="conteudo">
-
-            <span>
-              <ion-icon name="add-circle-outline"></ion-icon>
-              Razão e proporção
-            </span>
-
-            <ion-icon
-              class="seta"
-              name="chevron-forward-outline">
-            </ion-icon>
-
-          </button>
-
-
-          <button class="conteudo">
-
-            <span>
-              <ion-icon name="add-circle-outline"></ion-icon>
-              Fatoração
-            </span>
-
-            <ion-icon
-              class="seta"
-              name="chevron-forward-outline">
-            </ion-icon>
-
-          </button>
-
+        <div class="imagem-card algebra">
+          <ion-icon name="calculator-outline"></ion-icon>
         </div>
 
-      </div>
+        <ion-card-header>
+
+          <ion-card-title>
+            Álgebra
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Equações, expressões e operações algébricas.
+        </ion-card-content>
+
+        <div class="card-rodape">
+          <span>5 questões</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+
+      </ion-card>
 
 
       <!-- GEOMETRIA -->
-      <div class="categoria geometria">
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-geometria">
 
-        <h3>
-          📐 Geometria
-        </h3>
-
-
-        <div class="lista-conteudos">
-
-          <button class="conteudo">
-
-            <span>
-              <ion-icon name="add-circle-outline"></ion-icon>
-              Geometria Analítica
-            </span>
-
-            <ion-icon
-              class="seta"
-              name="chevron-forward-outline">
-            </ion-icon>
-
-          </button>
-
+        <div class="imagem-card geometria">
+          <ion-icon name="triangle-outline"></ion-icon>
         </div>
 
-      </div>
+        <ion-card-header>
 
-    </section>
+          <ion-card-title>
+            Geometria
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Figuras, áreas, perímetros e propriedades geométricas.
+        </ion-card-content>
+
+        <div class="card-rodape">
+          <span>5 questões</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+
+      </ion-card>
+
+
+      <!-- FUNÇÕES -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-funcoes">
+
+        <div class="imagem-card funcoes">
+          <ion-icon name="analytics-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Funções
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Funções de 1º e 2º grau, gráficos e relações.
+        </ion-card-content>
+
+        <div class="card-rodape">
+          <span>5 questões</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+
+      </ion-card>
+
+
+    </div>
 
   </div>
 

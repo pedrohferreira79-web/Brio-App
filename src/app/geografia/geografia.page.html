@@ -1,13 +1,147 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>geografia</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">geografia</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="pagina">
+
+    <!-- CABEÇALHO -->
+    <div class="cabecalho">
+
+      <div class="titulo-materia">
+        <h1>Geografia</h1>
+        <p>Nível Intermediário</p>
+        <span>XP da matéria: 920</span>
+      </div>
+
+      <!-- PROGRESSO -->
+      <div class="progresso-materia">
+        <div class="circulo-progresso">
+          <strong>35%</strong>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- PESQUISA -->
+    <div class="barra-pesquisa">
+
+      <ion-icon name="search-outline"></ion-icon>
+
+      <ion-input
+        type="text"
+        placeholder="Buscar assunto">
+      </ion-input>
+
+    </div>
+
+
+    <!-- TÍTULO -->
+    <h2 class="titulo-conteudos">
+      Conteúdos disponíveis
+    </h2>
+
+
+    <!-- CARDS -->
+    <div class="cards-assuntos">
+
+
+      <!-- GEOGRAFIA FÍSICA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-geografia-fisica">
+
+        <div class="imagem-card fisica">
+          <ion-icon name="earth-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Geografia Física
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Relevo, clima, vegetação, hidrografia e características naturais.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- GEOPOLÍTICA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-geopolitica">
+
+        <div class="imagem-card geopolitica">
+          <ion-icon name="globe-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Geopolítica
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Países, territórios, relações internacionais e conflitos.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- CARTOGRAFIA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-cartografia">
+
+        <div class="imagem-card cartografia">
+          <ion-icon name="map-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Cartografia
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Mapas, escalas, coordenadas geográficas e localização.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+    </div>
+
+  </div>
+
 </ion-content>

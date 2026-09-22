@@ -1,13 +1,147 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>biologia</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">biologia</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="pagina">
+
+    <!-- CABEÇALHO -->
+    <div class="cabecalho">
+
+      <div class="titulo-materia">
+        <h1>Biologia</h1>
+        <p>Nível Intermediário</p>
+        <span>XP da matéria: 1.080</span>
+      </div>
+
+      <!-- PROGRESSO -->
+      <div class="progresso-materia">
+        <div class="circulo-progresso">
+          <strong>42%</strong>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- PESQUISA -->
+    <div class="barra-pesquisa">
+
+      <ion-icon name="search-outline"></ion-icon>
+
+      <ion-input
+        type="text"
+        placeholder="Buscar assunto">
+      </ion-input>
+
+    </div>
+
+
+    <!-- TÍTULO -->
+    <h2 class="titulo-conteudos">
+      Conteúdos disponíveis
+    </h2>
+
+
+    <!-- CARDS -->
+    <div class="cards-assuntos">
+
+
+      <!-- CITOLOGIA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-citologia">
+
+        <div class="imagem-card citologia">
+          <ion-icon name="ellipse-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Citologia
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Células, organelas, membrana plasmática e suas funções.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- GENÉTICA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-genetica">
+
+        <div class="imagem-card genetica">
+          <ion-icon name="git-network-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Genética
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          DNA, genes, hereditariedade e características genéticas.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+      <!-- ECOLOGIA -->
+      <ion-card
+        class="card-assunto"
+        routerLink="/exercicios-ecologia">
+
+        <div class="imagem-card ecologia">
+          <ion-icon name="leaf-outline"></ion-icon>
+        </div>
+
+        <ion-card-header>
+
+          <ion-card-title>
+            Ecologia
+          </ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          Ecossistemas, cadeias alimentares e relações ecológicas.
+        </ion-card-content>
+
+        <div class="card-rodape">
+
+          <span>5 exercícios</span>
+
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+
+        </div>
+
+      </ion-card>
+
+
+    </div>
+
+  </div>
+
 </ion-content>

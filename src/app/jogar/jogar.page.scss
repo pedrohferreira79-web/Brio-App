@@ -1,64 +1,74 @@
+/* ==============================
+   FUNDO
+============================== */
+
 ion-content {
   --background: #ffffff;
 }
 
-/* =========================
-   PÁGINA
-========================= */
 
-.pagina {
+/* ==============================
+   CONTAINER
+============================== */
+
+.materias-container {
   width: 100%;
-  max-width: 500px;
+  max-width: 650px;
 
   margin: 0 auto;
 
-  padding: 25px 16px 35px;
+  padding: 18px 16px 30px;
 
   box-sizing: border-box;
 }
 
 
-/* =========================
-   TÍTULO
-========================= */
+/* ==============================
+   CABEÇALHO
+============================== */
 
-h1 {
+.cabecalho-materias {
+  margin-bottom: 20px;
+}
+
+.cabecalho-materias h1 {
   margin: 0;
 
-  font-size: 32px;
+  font-size: 30px;
+
   font-weight: 800;
 
   color: #111827;
 }
 
-.subtitulo {
-  margin: 5px 0 25px;
+.cabecalho-materias p {
+  margin: 3px 0 0;
 
-  font-size: 14px;
+  font-size: 13px;
 
   color: #64748b;
 }
 
 
-/* =========================
+/* ==============================
    GRID DE MATÉRIAS
-========================= */
+============================== */
 
-.materias {
+.lista-materias {
   display: grid;
 
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 14px;
+  gap: 12px;
 }
 
 
-/* =========================
-   CARTÃO
-========================= */
+/* ==============================
+   CARD DA MATÉRIA
+============================== */
 
-.materia {
-  height: 125px;
+.card-materia {
+  height: 112px;
 
   display: flex;
 
@@ -68,99 +78,241 @@ h1 {
 
   justify-content: center;
 
-  gap: 10px;
+  gap: 8px;
 
-  text-decoration: none;
+  box-sizing: border-box;
 
-  background: #faf7ff;
+  background: #fbf9ff;
 
-  border: 1px solid #e8ddf7;
+  border: 1px solid #e9ddfa;
 
-  border-radius: 16px;
+  border-radius: 15px;
 
-  box-shadow: 0 4px 10px rgba(91, 33, 182, 0.08);
+  box-shadow: 0 5px 14px rgba(91, 33, 182, 0.07);
 
-  transition: 0.2s;
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
 
-/* =========================
-   ÍCONE
-========================= */
+/* EFEITO AO TOCAR */
 
-.icone {
-  width: 58px;
-  height: 58px;
+.card-materia:active {
+  transform: scale(0.96);
+
+  box-shadow: 0 3px 8px rgba(91, 33, 182, 0.12);
+}
+
+
+/* ==============================
+   ÍCONE
+============================== */
+
+.icone-materia {
+  width: 51px;
+  height: 51px;
 
   display: flex;
 
   align-items: center;
   justify-content: center;
 
-  border-radius: 15px;
+  border-radius: 14px;
 
   background: #5b21b6;
 
-  font-size: 30px;
+  color: #ffffff;
 
-  box-shadow: 0 4px 8px rgba(91, 33, 182, 0.2);
+  font-size: 27px;
+
+  box-shadow:
+    0 5px 10px rgba(91, 33, 182, 0.20);
 }
 
 
-/* =========================
+/* ==============================
    NOME DA MATÉRIA
-========================= */
+============================== */
 
-.materia span {
-  font-size: 12px;
+.card-materia strong {
+  width: 100%;
 
-  font-weight: 700;
+  padding: 0 4px;
+
+  box-sizing: border-box;
 
   text-align: center;
+
+  font-size: 11px;
+
+  line-height: 14px;
 
   color: #111827;
 }
 
 
-/* =========================
-   EFEITO AO CLICAR
-========================= */
+/* ==============================
+   INTRODUÇÃO
+============================== */
 
-.materia:active {
-  transform: scale(0.95);
+.introducao-materias {
+  position: relative;
 
-  background: #f0e9ff;
+  min-height: 125px;
+
+  margin-top: 28px;
+
+  padding: 18px 18px 18px 128px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #faf7ff,
+    #f1eaff
+  );
+
+  border: 1px solid #e7dafa;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 7px 18px rgba(91, 33, 182, 0.09);
 }
 
 
-/* =========================
+/* ==============================
+   PERSONAGEM
+============================== */
+
+.personagem-materias {
+  position: absolute;
+
+  left: 8px;
+  bottom: 0;
+
+  width: 115px;
+  height: 125px;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.personagem-materias img {
+  width: 115px;
+  height: 115px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* ==============================
+   MENSAGEM
+============================== */
+
+.mensagem-materias {
+  position: relative;
+
+  z-index: 2;
+}
+
+.mensagem-materias span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  color: #6d28d9;
+
+  letter-spacing: 0.3px;
+}
+
+.mensagem-materias h2 {
+  margin: 0;
+
+  font-size: 17px;
+
+  line-height: 21px;
+
+  font-weight: 800;
+
+  color: #171127;
+}
+
+.mensagem-materias p {
+  margin: 5px 0 0;
+
+  max-width: 230px;
+
+  font-size: 11px;
+
+  line-height: 15px;
+
+  color: #64748b;
+}
+
+
+/* ==============================
    RESPONSIVIDADE
-========================= */
+============================== */
 
 @media (max-width: 360px) {
 
-  .pagina {
-    padding-left: 10px;
-    padding-right: 10px;
+  .materias-container {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
-  .materias {
+  .lista-materias {
     gap: 9px;
   }
 
-  .materia {
-    height: 110px;
+  .card-materia {
+    height: 108px;
   }
 
-  .icone {
-    width: 50px;
-    height: 50px;
+  .icone-materia {
+    width: 47px;
+    height: 47px;
 
-    font-size: 25px;
+    font-size: 24px;
   }
 
-  .materia span {
+  .introducao-materias {
+    padding-left: 112px;
+  }
+
+  .personagem-materias {
+    width: 105px;
+  }
+
+  .personagem-materias img {
+    width: 105px;
+    height: 105px;
+  }
+
+  .mensagem-materias h2 {
+    font-size: 15px;
+  }
+
+  .mensagem-materias p {
     font-size: 10px;
   }
-
 }

@@ -1,239 +1,416 @@
-<ion-content [fullscreen]="true">
+<ion-content>
 
   <div class="conteudo">
 
-    <!-- PERFIL -->
+    <!-- ==============================
+         CARD DE PERSONALIZAÇÃO
+    =============================== -->
+
+    <div
+      class="card-personalizacao"
+      routerLink="/fotos-perfil">
+
+      <img
+        src="assets/personagem-loja.png"
+        alt="Item personalizado"
+      >
+
+    </div>
+
+
+    <!-- ==============================
+         PERFIL
+    =============================== -->
+
     <div class="perfil">
 
       <div class="informacoes-perfil">
+
         <h1>Pedro H.</h1>
 
-        <p class="nivel">Nível 12</p>
+        <p class="nivel">
+          Nível 12
+        </p>
 
         <p class="categoria">
           Estudante Estratégico
         </p>
+
       </div>
 
-   <button class="foto-perfil" routerLink="/fotos-perfil">
-  <ion-icon name="person"></ion-icon>
-   </button>
+
+      <button
+        class="foto-perfil"
+        routerLink="/fotos-perfil">
+
+        <ion-icon name="person"></ion-icon>
+
+      </button>
+
     </div>
 
 
-    <!-- XP -->
+    <!-- ==============================
+         XP
+    =============================== -->
+
     <div class="xp-card">
 
       <div class="xp-topo">
-        <span>Experiência</span>
-        <strong>4.850 XP</strong>
+
+        <span>
+          Experiência
+        </span>
+
+        <strong>
+          4.850 XP
+        </strong>
+
       </div>
+
 
       <div class="barra-xp">
+
         <div class="xp-atual"></div>
+
       </div>
 
+
       <div class="xp-info">
-        <span>4.850</span>
-        <span>100.000 XP</span>
+
+        <span>
+          4.850
+        </span>
+
+        <span>
+          100.000 XP
+        </span>
+
       </div>
 
     </div>
 
 
-    <!-- RESUMO GERAL -->
-    <h2>Resumo Geral</h2>
+    <!-- ==============================
+         RESUMO GERAL
+    =============================== -->
+
+    <h2>
+      Resumo Geral
+    </h2>
+
 
     <div class="resumo">
 
       <div class="item-resumo">
-        <span class="icone">🔥</span>
+
+        <span class="icone">
+          🔥
+        </span>
 
         <div>
-          <strong>15 dias</strong>
-          <p>Sequência atual</p>
+
+          <strong>
+            15 dias
+          </strong>
+
+          <p>
+            Sequência atual
+          </p>
+
         </div>
+
       </div>
 
 
       <div class="item-resumo">
-        <span class="icone">📚</span>
+
+        <span class="icone">
+          📚
+        </span>
 
         <div>
-          <strong>428</strong>
-          <p>Exercícios concluídos</p>
+
+          <strong>
+            428
+          </strong>
+
+          <p>
+            Exercícios concluídos
+          </p>
+
         </div>
+
       </div>
 
 
       <div class="item-resumo">
-        <span class="icone">⏱️</span>
+
+        <span class="icone">
+          ⏱️
+        </span>
 
         <div>
-          <strong>38h</strong>
-          <p>Tempo estudado</p>
+
+          <strong>
+            38h
+          </strong>
+
+          <p>
+            Tempo estudado
+          </p>
+
         </div>
+
       </div>
 
 
       <div class="item-resumo">
-        <span class="icone">🏆</span>
+
+        <span class="icone">
+          🏆
+        </span>
 
         <div>
-          <strong>27</strong>
-          <p>Conquistas</p>
+
+          <strong>
+            27
+          </strong>
+
+          <p>
+            Conquistas
+          </p>
+
         </div>
+
       </div>
 
 
       <div class="item-resumo">
-        <span class="icone">🪙</span>
+
+        <span class="icone">
+          🪙
+        </span>
 
         <div>
-          <strong>1.250</strong>
-          <p>BRIO Coins</p>
+
+          <strong>
+            1.250
+          </strong>
+
+          <p>
+            BRIO Coins
+          </p>
+
         </div>
+
       </div>
 
     </div>
 
 
-    <!-- CONQUISTAS -->
-    <div class="titulo-secao">
-      <h2>Conquistas</h2>
+    <!-- ==============================
+         CONQUISTAS
+    =============================== -->
 
-      <button class="contador" routerLink="/conquistas">
+    <div class="titulo-secao">
+
+      <h2>
+        Conquistas
+      </h2>
+
+      <button
+        class="contador"
+        routerLink="/conquistas">
+
         27/35 desbloqueadas
+
       </button>
+
     </div>
 
 
     <div class="conquistas">
 
-      <!-- CONQUISTA 1 -->
       <div class="conquista desbloqueada">
 
         <div class="medalha azul">
           🏆
         </div>
 
-        <strong>Primeiro Passo</strong>
+        <strong>
+          Primeiro Passo
+        </strong>
 
-        <p>Complete seu primeiro exercício.</p>
+        <p>
+          Complete seu primeiro exercício.
+        </p>
 
       </div>
 
 
-      <!-- CONQUISTA 2 -->
       <div class="conquista desbloqueada">
 
         <div class="medalha amarelo">
           🔥
         </div>
 
-        <strong>Constante</strong>
+        <strong>
+          Constante
+        </strong>
 
-        <p>Estude por 7 dias seguidos.</p>
+        <p>
+          Estude por 7 dias seguidos.
+        </p>
 
       </div>
 
 
-      <!-- CONQUISTA 3 -->
       <div class="conquista desbloqueada">
 
         <div class="medalha laranja">
           ⭐
         </div>
 
-        <strong>Focado</strong>
+        <strong>
+          Focado
+        </strong>
 
-        <p>Complete 100 exercícios.</p>
+        <p>
+          Complete 100 exercícios.
+        </p>
 
       </div>
 
 
-      <!-- CONQUISTA 4 -->
       <div class="conquista bloqueada">
 
         <div class="medalha bloqueada-medalha">
           🔒
         </div>
 
-        <strong>Imparável</strong>
+        <strong>
+          Imparável
+        </strong>
 
-        <p>Estude por 30 dias seguidos.</p>
+        <p>
+          Estude por 30 dias seguidos.
+        </p>
 
       </div>
 
     </div>
 
 
-    <!-- DESEMPENHO -->
-    <h2>📚 Desempenho por Matéria</h2>
+    <!-- ==============================
+         DESEMPENHO
+    =============================== -->
+
+    <h2>
+      📚 Desempenho por Matéria
+    </h2>
 
 
-    <!-- MATEMÁTICA -->
     <div class="materia">
 
       <div class="materia-topo">
-        <span>Matemática</span>
-        <strong>82%</strong>
+
+        <span>
+          Matemática
+        </span>
+
+        <strong>
+          82%
+        </strong>
+
       </div>
 
       <div class="barra-materia">
+
         <div class="matematica"></div>
+
       </div>
 
     </div>
 
 
-    <!-- PORTUGUÊS -->
     <div class="materia">
 
       <div class="materia-topo">
-        <span>Língua Portuguesa</span>
-        <strong>76%</strong>
+
+        <span>
+          Língua Portuguesa
+        </span>
+
+        <strong>
+          76%
+        </strong>
+
       </div>
 
       <div class="barra-materia">
+
         <div class="portugues"></div>
+
       </div>
 
     </div>
 
 
-    <!-- BIOLOGIA -->
     <div class="materia">
 
       <div class="materia-topo">
-        <span>Biologia</span>
-        <strong>68%</strong>
+
+        <span>
+          Biologia
+        </span>
+
+        <strong>
+          68%
+        </strong>
+
       </div>
 
       <div class="barra-materia">
+
         <div class="biologia"></div>
+
       </div>
 
     </div>
 
 
-    <!-- HISTÓRIA -->
     <div class="materia">
 
       <div class="materia-topo">
-        <span>História</span>
-        <strong>91%</strong>
+
+        <span>
+          História
+        </span>
+
+        <strong>
+          91%
+        </strong>
+
       </div>
 
       <div class="barra-materia">
+
         <div class="historia"></div>
+
       </div>
 
     </div>
 
 
-    <!-- PERCURSO -->
-    <h2>Seu percurso</h2>
+    <!-- ==============================
+         PERCURSO
+    =============================== -->
+
+    <h2>
+      Seu percurso
+    </h2>
+
 
     <div class="percurso">
 
@@ -243,7 +420,9 @@
           ✓
         </div>
 
-        <strong>Iniciante</strong>
+        <strong>
+          Iniciante
+        </strong>
 
       </div>
 
@@ -257,7 +436,9 @@
           ✓
         </div>
 
-        <strong>Constante</strong>
+        <strong>
+          Constante
+        </strong>
 
       </div>
 
@@ -271,7 +452,9 @@
           12
         </div>
 
-        <strong>Estratégico</strong>
+        <strong>
+          Estratégico
+        </strong>
 
       </div>
 
@@ -285,7 +468,9 @@
           ?
         </div>
 
-        <strong>Focado</strong>
+        <strong>
+          Focado
+        </strong>
 
       </div>
 

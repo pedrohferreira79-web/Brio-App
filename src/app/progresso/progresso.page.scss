@@ -1,326 +1,328 @@
+/* ==============================
+   FUNDO
+============================== */
+
 ion-content {
-  --background: #f5f7fa;
+  --background: #f6f7fb;
 }
 
-
-/* =========================
-   CONTEÚDO
-========================= */
 
 .conteudo {
-  padding: 25px 20px 35px;
+  width: 100%;
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  padding: 16px 11px 35px;
+
+  box-sizing: border-box;
 }
 
 
-/* =========================
+/* ==============================
+   CARD DE PERSONALIZAÇÃO
+============================== */
+
+.card-personalizacao {
+
+  width: 100%;
+  height: 155px;
+
+  margin-bottom: 18px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #3511a8,
+    #7428e8,
+    #a13cff
+  );
+
+  box-shadow:
+    0 8px 20px rgba(82, 39, 168, 0.18);
+
+  cursor: pointer;
+}
+
+
+/* IMAGEM OCUPA TODO O CARD */
+
+.card-personalizacao img {
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+/* PEQUENO EFEITO AO TOCAR */
+
+.card-personalizacao:active img {
+
+  transform: scale(0.97);
+
+}
+
+
+/* ==============================
    PERFIL
-========================= */
+============================== */
 
 .perfil {
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
-  margin-bottom: 20px;
+  gap: 12px;
+
+  margin-bottom: 16px;
 }
 
+
+.informacoes-perfil {
+  min-width: 0;
+}
+
+
 .informacoes-perfil h1 {
+
   margin: 0;
 
-  font-size: 42px;
+  font-size: 34px;
+
+  line-height: 38px;
+
   font-weight: 800;
 
   color: #111827;
 }
 
+
 .nivel {
-  margin: 4px 0 0;
 
-  font-size: 21px;
+  margin: 3px 0 0;
 
-  color: #6b7280;
+  font-size: 17px;
+
+  color: #64748b;
 }
+
 
 .categoria {
-  margin: 0;
 
-  font-size: 18px;
-
-  color: #6b7280;
-}
-
-
-/* FOTO */
-
-.foto-perfil {
-  width: 65px;
-  height: 65px;
-
-  background: #111827;
-
-  border-radius: 15px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
-}
-
-.foto-perfil ion-icon {
-  color: white;
-
-  font-size: 39px;
-}
-
-
-/* =========================
-   XP
-========================= */
-
-.xp-card {
-  background: white;
-
-  padding: 18px;
-
-  border-radius: 15px;
-
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-
-  border-left: 5px solid #3b82f6;
-}
-
-.xp-topo {
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-  margin-bottom: 12px;
-}
-
-.xp-topo span {
-  font-size: 15px;
-
-  color: #6b7280;
-}
-
-.xp-topo strong {
-  font-size: 18px;
-
-  color: #1e3a5f;
-}
-
-.barra-xp {
-  width: 100%;
-
-  height: 9px;
-
-  background: #e5e7eb;
-
-  border-radius: 10px;
-
-  overflow: hidden;
-}
-
-.xp-atual {
-  width: 18%;
-
-  height: 100%;
-
-  background: linear-gradient(
-    90deg,
-    #1e3a5f,
-    #3b82f6
-  );
-
-  border-radius: 10px;
-}
-
-.xp-info {
-  display: flex;
-
-  justify-content: space-between;
-
-  margin-top: 7px;
-
-  font-size: 12px;
-
-  color: #9ca3af;
-}
-
-
-/* =========================
-   TÍTULOS
-========================= */
-
-h2 {
-  margin-top: 25px;
-
-  margin-bottom: 12px;
-
-  font-size: 20px;
-
-  color: #111827;
-}
-
-
-/* =========================
-   RESUMO
-========================= */
-
-.resumo {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 10px;
-}
-
-.item-resumo {
-  display: flex;
-
-  align-items: center;
-
-  gap: 10px;
-
-  background: white;
-
-  padding: 13px;
-
-  border-radius: 12px;
-
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
-}
-
-.item-resumo:last-child {
-  grid-column: span 2;
-}
-
-.icone {
-  font-size: 24px;
-}
-
-.item-resumo strong {
-  display: block;
+  margin: 1px 0 0;
 
   font-size: 16px;
 
-  color: #111827;
-}
-
-.item-resumo p {
-  margin: 2px 0 0;
-
-  font-size: 12px;
-
-  color: #6b7280;
+  color: #64748b;
 }
 
 
-/* =========================
-   TÍTULO DAS CONQUISTAS
-========================= */
+/* FOTO DO PERFIL */
 
-.titulo-secao {
-  display: flex;
+.foto-perfil {
 
-  justify-content: space-between;
-
-  align-items: center;
-}
-
-.titulo-secao h2 {
-  margin-bottom: 0;
-}
-
-.contador {
-  margin-top: 22px;
-
-  font-size: 12px;
-
-  color: #3b82f6;
-
-  font-weight: 600;
-}
-
-
-/* =========================
-   CONQUISTAS
-========================= */
-
-.conquistas {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 12px;
-
-  margin-top: 14px;
-}
-
-.conquista {
-  background: white;
-
-  padding: 15px 10px;
-
-  border-radius: 14px;
-
-  text-align: center;
-
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
-
-  transition: transform 0.2s;
-}
-
-.conquista:active {
-  transform: scale(0.96);
-}
-
-.medalha {
   width: 58px;
   height: 58px;
 
-  margin: 0 auto 9px;
-
-  border-radius: 50%;
+  flex-shrink: 0;
 
   display: flex;
 
   align-items: center;
   justify-content: center;
 
-  font-size: 27px;
+  border: none;
+
+  border-radius: 14px;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  font-size: 29px;
+
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
 }
 
-.medalha.azul {
-  background: #dbeafe;
 
-  border: 3px solid #3b82f6;
+/* ==============================
+   XP
+============================== */
+
+.xp-card {
+
+  padding: 15px;
+
+  margin-bottom: 21px;
+
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  border-left: 4px solid #347cff;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
-.medalha.amarelo {
-  background: #fef3c7;
 
-  border: 3px solid #facc15;
+.xp-topo {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+
+  font-size: 14px;
+
+  color: #64748b;
 }
 
-.medalha.laranja {
-  background: #ffedd5;
 
-  border: 3px solid #fb923c;
+.xp-topo strong {
+
+  color: #263f68;
+
+  font-size: 16px;
 }
 
-.bloqueada-medalha {
+
+.barra-xp {
+
+  width: 100%;
+  height: 8px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
   background: #e5e7eb;
-
-  border: 3px solid #d1d5db;
-
-  filter: grayscale(1);
 }
 
-.conquista strong {
+
+.xp-atual {
+
+  width: 4.85%;
+
+  height: 100%;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #183e73,
+    #3c83ff
+  );
+}
+
+
+.xp-info {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 6px;
+
+  font-size: 11px;
+
+  color: #94a3b8;
+}
+
+
+/* ==============================
+   TÍTULOS
+============================== */
+
+h2 {
+
+  margin: 19px 0 10px;
+
+  font-size: 19px;
+
+  font-weight: 700;
+
+  color: #111827;
+}
+
+
+/* ==============================
+   RESUMO
+============================== */
+
+.resumo {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 9px;
+}
+
+
+.item-resumo {
+
+  min-height: 62px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 10px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+.item-resumo:last-child {
+
+  grid-column: 1 / -1;
+}
+
+
+.icone {
+
+  font-size: 26px;
+
+  flex-shrink: 0;
+}
+
+
+.item-resumo strong {
+
   display: block;
 
   font-size: 14px;
@@ -328,178 +330,437 @@ h2 {
   color: #111827;
 }
 
-.conquista p {
-  margin: 5px 0 0;
 
-  font-size: 11px;
+.item-resumo p {
 
-  line-height: 15px;
+  margin: 2px 0 0;
 
-  color: #6b7280;
-}
+  font-size: 10px;
 
-.conquista.bloqueada {
-  opacity: 0.65;
+  color: #64748b;
 }
 
 
-/* =========================
-   DESEMPENHO
-========================= */
+/* ==============================
+   CONQUISTAS
+============================== */
 
-.materia {
-  background: white;
+.titulo-secao {
 
-  padding: 13px;
-
-  margin-bottom: 10px;
-
-  border-radius: 12px;
-
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
-}
-
-.materia-topo {
   display: flex;
+
+  align-items: center;
 
   justify-content: space-between;
 
+  gap: 10px;
+
+  margin-top: 19px;
+}
+
+
+.titulo-secao h2 {
+
+  margin: 0;
+}
+
+
+.contador {
+
+  padding: 4px 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #347cff;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+.conquistas {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
+
+.conquista {
+
+  min-height: 128px;
+
+  padding: 13px 9px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  flex-direction: column;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+.medalha {
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
   margin-bottom: 8px;
+
+  border-radius: 50%;
+
+  font-size: 25px;
 }
 
-.materia-topo span {
-  font-size: 14px;
 
-  color: #374151;
+.azul {
+
+  background: #e0edff;
+
+  border: 2px solid #3983ff;
 }
+
+
+.amarelo {
+
+  background: #fff6d6;
+
+  border: 2px solid #ffc400;
+}
+
+
+.laranja {
+
+  background: #fff0df;
+
+  border: 2px solid #ff8b22;
+}
+
+
+.bloqueada-medalha {
+
+  background: #eeeeee;
+
+  filter: grayscale(1);
+
+  opacity: 0.7;
+}
+
+
+.conquista strong {
+
+  font-size: 13px;
+
+  color: #111827;
+}
+
+
+.conquista p {
+
+  margin: 5px 0 0;
+
+  font-size: 9px;
+
+  line-height: 13px;
+
+  color: #64748b;
+}
+
+
+/* ==============================
+   DESEMPENHO
+============================== */
+
+.materia {
+
+  padding: 12px;
+
+  margin-bottom: 9px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.materia-topo {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 7px;
+
+  font-size: 13px;
+}
+
 
 .materia-topo strong {
-  font-size: 14px;
 
-  color: #1e3a5f;
+  color: #5526a8;
 }
 
+
 .barra-materia {
+
   width: 100%;
+  height: 7px;
 
-  height: 9px;
-
-  background: #e5e7eb;
+  overflow: hidden;
 
   border-radius: 10px;
 
-  overflow: hidden;
+  background: #e5e7eb;
 }
 
+
 .barra-materia div {
+
   height: 100%;
 
   border-radius: 10px;
 }
 
+
 .matematica {
+
   width: 82%;
 
-  background: #3b82f6;
+  background: #5b21b6;
 }
+
 
 .portugues {
+
   width: 76%;
 
-  background: #facc15;
+  background: #347cff;
 }
+
 
 .biologia {
+
   width: 68%;
 
-  background: #22c55e;
+  background: #22a06b;
 }
+
 
 .historia {
+
   width: 91%;
 
-  background: #fb923c;
+  background: #e28a22;
 }
 
 
-/* =========================
+/* ==============================
    PERCURSO
-========================= */
+============================== */
 
 .percurso {
+
   display: flex;
 
   align-items: center;
 
-  overflow-x: auto;
+  justify-content: space-between;
 
-  padding: 15px 0 10px;
+  padding: 10px 2px 25px;
+
+  overflow-x: auto;
 }
 
+
 .etapa {
-  min-width: 70px;
+
+  min-width: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  flex-direction: column;
 
   text-align: center;
 }
 
+
 .bolinha {
-  width: 42px;
-  height: 42px;
 
-  margin: auto;
-
-  border-radius: 50%;
+  width: 39px;
+  height: 39px;
 
   display: flex;
 
   align-items: center;
   justify-content: center;
 
-  color: white;
+  margin-bottom: 5px;
 
-  font-weight: bold;
+  border-radius: 50%;
 
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  background: #e5e7eb;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  font-weight: 700;
 }
 
-.etapa strong {
-  display: block;
 
-  margin-top: 7px;
+.etapa strong {
 
   font-size: 10px;
 
-  color: #374151;
+  color: #64748b;
 }
 
-.concluida .bolinha {
-  background: #22c55e;
+
+.etapa.concluida .bolinha {
+
+  background: #5b21b6;
+
+  color: #ffffff;
 }
 
-.atual .bolinha {
-  background: #3b82f6;
+
+.etapa.concluida strong {
+
+  color: #5b21b6;
+}
+
+
+.etapa.atual .bolinha {
+
+  background: #347cff;
+
+  color: #ffffff;
 
   box-shadow:
-    0 0 0 5px #dbeafe,
-    0 4px 10px rgba(59, 130, 246, 0.3);
+    0 0 0 5px #dceaff;
 }
 
-.bloqueada .bolinha {
-  background: #d1d5db;
 
-  color: #6b7280;
+.etapa.atual strong {
+
+  color: #347cff;
 }
+
+
+.etapa.bloqueada {
+
+  opacity: 0.6;
+}
+
 
 .linha {
-  min-width: 25px;
+
+  flex: 1;
 
   height: 3px;
 
-  background: #d1d5db;
+  min-width: 20px;
 
   margin: 0 3px;
+
+  background: #e5e7eb;
+
+  border-radius: 5px;
 }
 
+
 .concluida-linha {
-  background: #22c55e;
+
+  background: #5b21b6;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (max-width: 360px) {
+
+  .conteudo {
+
+    padding-left: 9px;
+
+    padding-right: 9px;
+
+  }
+
+
+  .card-personalizacao {
+
+    height: 135px;
+
+    border-radius: 17px;
+
+  }
+
+
+  .informacoes-perfil h1 {
+
+    font-size: 30px;
+
+  }
+
+
+  .nivel {
+
+    font-size: 15px;
+
+  }
+
+
+  .categoria {
+
+    font-size: 14px;
+
+  }
+
+
+  .foto-perfil {
+
+    width: 52px;
+
+    height: 52px;
+
+    font-size: 25px;
+
+  }
+
 }

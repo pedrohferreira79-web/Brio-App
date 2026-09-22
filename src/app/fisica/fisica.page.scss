@@ -1,0 +1,366 @@
+ion-content {
+  --background: #ffffff;
+}
+
+
+/* ==============================
+   PÁGINA
+============================== */
+
+.pagina {
+  width: 100%;
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  padding: 22px 14px 35px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
+.cabecalho {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+
+.titulo-materia {
+  flex: 1;
+  min-width: 0;
+}
+
+
+.titulo-materia h1 {
+  margin: 0;
+
+  font-size: 28px;
+
+  font-weight: 800;
+
+  color: #111827;
+}
+
+
+.titulo-materia p {
+  margin: 4px 0 0;
+
+  font-size: 14px;
+
+  color: #64748b;
+}
+
+
+.titulo-materia span {
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  color: #ea580c;
+}
+
+
+/* ==============================
+   CÍRCULO DE PROGRESSO
+============================== */
+
+.progresso-materia {
+  width: 78px;
+  height: 78px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    conic-gradient(
+      #ea580c 0% 40%,
+      #ffedd5 40% 100%
+    );
+}
+
+
+.circulo-progresso {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+}
+
+
+.circulo-progresso strong {
+  font-size: 20px;
+
+  color: #111827;
+}
+
+
+/* ==============================
+   BARRA DE PESQUISA
+============================== */
+
+.barra-pesquisa {
+  width: 100%;
+
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 13px;
+
+  box-sizing: border-box;
+
+  background: #fff7ed;
+
+  border-radius: 22px;
+
+  margin-bottom: 22px;
+}
+
+
+.barra-pesquisa ion-icon {
+  font-size: 19px;
+
+  color: #ea580c;
+}
+
+
+.barra-pesquisa ion-input {
+  --padding-start: 0;
+
+  font-size: 13px;
+
+  color: #374151;
+}
+
+
+/* ==============================
+   TÍTULO DOS CONTEÚDOS
+============================== */
+
+.titulo-conteudos {
+  margin: 0 0 12px;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  color: #111827;
+}
+
+
+/* ==============================
+   CARDS
+============================== */
+
+.cards-assuntos {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+.card-assunto {
+  margin: 0;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  border: 1px solid #f1e4d8;
+
+  box-shadow:
+    0 4px 12px rgba(234, 88, 12, 0.08);
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.card-assunto:active {
+  transform: scale(0.98);
+}
+
+
+/* ==============================
+   ÁREA DOS ÍCONES
+============================== */
+
+.imagem-card {
+  height: 100px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  font-size: 48px;
+}
+
+
+/* MECÂNICA */
+
+.mecanica {
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #06b6d4
+  );
+}
+
+
+/* TERMOLOGIA */
+
+.termologia {
+  background: linear-gradient(
+    135deg,
+    #dc2626,
+    #f97316
+  );
+}
+
+
+/* ELETRICIDADE */
+
+.eletricidade {
+  background: linear-gradient(
+    135deg,
+    #eab308,
+    #f59e0b
+  );
+}
+
+
+/* ==============================
+   TEXTO DOS CARDS
+============================== */
+
+.card-assunto ion-card-header {
+  padding: 13px 14px 4px;
+}
+
+
+.card-assunto ion-card-title {
+  font-size: 18px;
+
+  font-weight: 800;
+
+  color: #111827;
+}
+
+
+.card-assunto ion-card-content {
+  padding: 0 14px 10px;
+
+  font-size: 12px;
+
+  line-height: 17px;
+
+  color: #64748b;
+}
+
+
+/* ==============================
+   RODAPÉ DO CARD
+============================== */
+
+.card-rodape {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 9px 14px 12px;
+
+  border-top: 1px solid #f2e8df;
+}
+
+
+.card-rodape span {
+  font-size: 11px;
+
+  font-weight: 700;
+
+  color: #ea580c;
+}
+
+
+.card-rodape ion-icon {
+  font-size: 20px;
+
+  color: #ea580c;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (max-width: 360px) {
+
+  .pagina {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+  .titulo-materia h1 {
+    font-size: 25px;
+  }
+
+
+  .progresso-materia {
+    width: 70px;
+    height: 70px;
+  }
+
+
+  .circulo-progresso {
+    width: 56px;
+    height: 56px;
+  }
+
+
+  .circulo-progresso strong {
+    font-size: 18px;
+  }
+
+}

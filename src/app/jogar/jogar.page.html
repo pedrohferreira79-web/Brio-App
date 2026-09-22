@@ -1,64 +1,151 @@
-<ion-content>
+<ion-content [fullscreen]="true">
 
-  <div class="pagina">
+  <div class="materias-container">
 
-    <h1>Matérias</h1>
+    <!-- CABEÇALHO -->
+    <div class="cabecalho-materias">
 
-    <p class="subtitulo">
-      Escolha uma matéria para começar seus estudos
-    </p>
+      <h1>Matérias</h1>
 
-    <div class="materias">
+      <p>
+        Escolha uma matéria para começar seus estudos
+      </p>
 
-      <a class="materia" routerLink="/matematica">
-        <div class="icone">📐</div>
-        <span>Matemática</span>
-      </a>
+    </div>
 
-      <a class="materia" routerLink="/portugues">
-        <div class="icone">📚</div>
-        <span>Língua Portuguesa</span>
-      </a>
 
-      <a class="materia" routerLink="/biologia">
-        <div class="icone">🧬</div>
-        <span>Biologia</span>
-      </a>
+    <!-- MATÉRIAS -->
+    <div class="lista-materias">
 
-      <a class="materia" routerLink="/geografia">
-        <div class="icone">🌎</div>
-        <span>Geografia</span>
-      </a>
+      <!-- MATEMÁTICA -->
+      <div class="card-materia" routerLink="/matematica">
+        <div class="icone-materia">
+          📐
+        </div>
 
-      <a class="materia" routerLink="/fisica">
-        <div class="icone">⚡</div>
-        <span>Física</span>
-      </a>
+        <strong>Matemática</strong>
+      </div>
 
-      <a class="materia" routerLink="/quimica">
-        <div class="icone">🧪</div>
-        <span>Química</span>
-      </a>
 
-      <a class="materia" routerLink="/ingles">
-        <div class="icone">🔤</div>
-        <span>Inglês</span>
-      </a>
+      <!-- PORTUGUÊS -->
+      <div class="card-materia" routerLink="/portugues">
+        <div class="icone-materia">
+          📚
+        </div>
 
-      <a class="materia" routerLink="/filosofia">
-        <div class="icone">💭</div>
-        <span>Filosofia</span>
-      </a>
+        <strong>Língua Portuguesa</strong>
+      </div>
 
-      <a class="materia" routerLink="/historia">
-        <div class="icone">🏛️</div>
-        <span>História</span>
-      </a>
 
-      <a class="materia" routerLink="/artes">
-        <div class="icone">🎨</div>
-        <span>Artes</span>
-      </a>
+      <!-- BIOLOGIA -->
+      <div class="card-materia" routerLink="/biologia">
+        <div class="icone-materia">
+          🧬
+        </div>
+
+        <strong>Biologia</strong>
+      </div>
+
+
+      <!-- GEOGRAFIA -->
+      <div class="card-materia" routerLink="/geografia">
+        <div class="icone-materia">
+          🌎
+        </div>
+
+        <strong>Geografia</strong>
+      </div>
+
+
+      <!-- FÍSICA -->
+      <div class="card-materia" routerLink="/fisica">
+        <div class="icone-materia">
+          ⚡
+        </div>
+
+        <strong>Física</strong>
+      </div>
+
+
+      <!-- QUÍMICA -->
+      <div class="card-materia" routerLink="/quimica">
+        <div class="icone-materia">
+          🧪
+        </div>
+
+        <strong>Química</strong>
+      </div>
+
+
+      <!-- INGLÊS -->
+      <div class="card-materia" routerLink="/ingles">
+        <div class="icone-materia">
+          🔤
+        </div>
+
+        <strong>Inglês</strong>
+      </div>
+
+
+      <!-- FILOSOFIA -->
+      <div class="card-materia" routerLink="/filosofia">
+        <div class="icone-materia">
+          ☁️
+        </div>
+
+        <strong>Filosofia</strong>
+      </div>
+
+
+      <!-- HISTÓRIA -->
+      <div class="card-materia" routerLink="/historia">
+        <div class="icone-materia">
+          🏛️
+        </div>
+
+        <strong>História</strong>
+      </div>
+
+
+      <!-- ARTES -->
+      <div class="card-materia" routerLink="/artes">
+        <div class="icone-materia">
+          🎨
+        </div>
+
+        <strong>Artes</strong>
+      </div>
+
+    </div>
+
+
+    <!-- INTRODUÇÃO COM PERSONAGEM -->
+    <div class="introducao-materias">
+
+      <div class="personagem-materias">
+
+        <img
+          src="assets/personagem-materias.png"
+          alt="Personagem BRIO"
+        >
+
+      </div>
+
+
+      <div class="mensagem-materias">
+
+        <span>✨ VAMOS COMEÇAR?</span>
+
+        <h2>
+          Escolha seu próximo desafio!
+        </h2>
+
+        <p>
+          Selecione uma matéria e continue sua jornada
+          de aprendizado no BRIO.
+        </p>
+
+      </div>
 
     </div>
 
