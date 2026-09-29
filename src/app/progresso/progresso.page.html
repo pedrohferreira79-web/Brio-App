@@ -1,21 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        text="Voltar"
+        defaultHref="/inicio">
+      </ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+
 <ion-content>
 
   <div class="conteudo">
 
-    <!-- ==============================
-         CARD DE PERSONALIZAÇÃO
-    =============================== -->
+  <!-- PERSONALIZAÇÃO DA FOTO -->
+<div class="card-personalizacao">
 
-    <div
-      class="card-personalizacao"
-      routerLink="/fotos-perfil">
+  <div class="area-foto">
 
-      <img
-        src="assets/personagem-loja.png"
-        alt="Item personalizado"
-      >
+    <!--
+      Espaço reservado para a foto do usuário.
+      Quando o usuário escolher uma imagem,
+      o src poderá ser alterado para a imagem escolhida.
+    -->
+    <img
+        class="moldura-personalizacao"
+  routerLink="/molduras">
 
-    </div>
+  <img
+    src="assets/molduraInicial.png"
+    alt="Molduras BRIO">
+
+
+  </div>
+
+</div>
 
 
     <!-- ==============================
@@ -26,7 +47,7 @@
 
       <div class="informacoes-perfil">
 
-        <h1>Pedro H.</h1>
+        <h1>Pedro</h1>
 
         <p class="nivel">
           Nível 12

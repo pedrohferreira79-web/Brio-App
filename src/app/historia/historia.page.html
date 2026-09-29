@@ -1,3 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        text="Voltar"
+        defaultHref="/jogar">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+<ion-content>
 <ion-content>
 
   <div class="pagina">
@@ -47,7 +59,7 @@
       <!-- BRASIL COLÔNIA -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-brasil-colonia">
+        routerLink="/brasil-colonia">
 
         <div class="imagem-card colonia">
           <ion-icon name="business-outline"></ion-icon>
@@ -79,7 +91,7 @@
       <!-- BRASIL REPÚBLICA -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-brasil-republica">
+        routerLink="/brasil-republica">
 
         <div class="imagem-card republica">
           <ion-icon name="flag-outline"></ion-icon>
@@ -111,7 +123,7 @@
       <!-- HISTÓRIA MUNDIAL -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-historia-mundial">
+        routerLink="/historia-mundial">
 
         <div class="imagem-card mundial">
           <ion-icon name="globe-outline"></ion-icon>

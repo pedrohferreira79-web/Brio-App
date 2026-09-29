@@ -1,3 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        text="Voltar"
+        defaultHref="/jogar">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+<ion-content>
 <ion-content>
 
   <div class="pagina">
@@ -47,7 +59,7 @@
       <!-- GEOGRAFIA FÍSICA -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-geografia-fisica">
+        routerLink="/geografia-fisica">
 
         <div class="imagem-card fisica">
           <ion-icon name="earth-outline"></ion-icon>
@@ -79,7 +91,7 @@
       <!-- GEOPOLÍTICA -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-geopolitica">
+        routerLink="/geopolitica">
 
         <div class="imagem-card geopolitica">
           <ion-icon name="globe-outline"></ion-icon>
@@ -111,7 +123,7 @@
       <!-- CARTOGRAFIA -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-cartografia">
+        routerLink="/cartografia">
 
         <div class="imagem-card cartografia">
           <ion-icon name="map-outline"></ion-icon>

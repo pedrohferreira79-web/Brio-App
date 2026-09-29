@@ -1,3 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        text="Voltar"
+        defaultHref="/jogar">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+<ion-content>
 <ion-content>
 
   <div class="pagina">
@@ -47,7 +59,7 @@
       <!-- ARTES VISUAIS -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-artes-visuais">
+        routerLink="/artes-visuais">
 
         <div class="imagem-card visuais">
           <ion-icon name="color-palette-outline"></ion-icon>
@@ -79,7 +91,7 @@
       <!-- MÚSICA -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-musica">
+        routerLink="/musica">
 
         <div class="imagem-card musica">
           <ion-icon name="musical-notes-outline"></ion-icon>
@@ -111,7 +123,7 @@
       <!-- TEATRO -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-teatro">
+        routerLink="/teatro">
 
         <div class="imagem-card teatro">
           <ion-icon name="happy-outline"></ion-icon>

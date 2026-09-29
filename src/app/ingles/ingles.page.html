@@ -1,3 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        text="Voltar"
+        defaultHref="/jogar">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+<ion-content>
 <ion-content>
 
   <div class="pagina">
@@ -47,7 +59,7 @@
       <!-- GRAMMAR -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-grammar">
+        routerLink="/grammar">
 
         <div class="imagem-card grammar">
           <ion-icon name="chatbubble-outline"></ion-icon>
@@ -79,7 +91,7 @@
       <!-- READING -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-reading">
+        routerLink="/reading">
 
         <div class="imagem-card reading">
           <ion-icon name="book-outline"></ion-icon>
@@ -111,7 +123,7 @@
       <!-- VOCABULARY -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-vocabulary">
+        routerLink="/vocabulary">
 
         <div class="imagem-card vocabulary">
           <ion-icon name="language-outline"></ion-icon>

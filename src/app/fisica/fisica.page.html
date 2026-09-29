@@ -1,3 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        text="Voltar"
+        defaultHref="/jogar">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+<ion-content>
 <ion-content>
 
   <div class="pagina">
@@ -47,7 +59,7 @@
       <!-- MECÂNICA -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-mecanica">
+        routerLink="/mecanica">
 
         <div class="imagem-card mecanica">
           <ion-icon name="speedometer-outline"></ion-icon>
@@ -79,7 +91,7 @@
       <!-- TERMOLOGIA -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-termologia">
+        routerLink="/termologia">
 
         <div class="imagem-card termologia">
           <ion-icon name="thermometer-outline"></ion-icon>
@@ -111,7 +123,7 @@
       <!-- ELETRICIDADE -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-eletricidade">
+        routerLink="/eletricidade">
 
         <div class="imagem-card eletricidade">
           <ion-icon name="flash-outline"></ion-icon>

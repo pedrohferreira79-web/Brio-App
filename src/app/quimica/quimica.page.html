@@ -1,3 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        text="Voltar"
+        defaultHref="/jogar">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+<ion-content>
 <ion-content>
 
   <div class="pagina">
@@ -47,7 +59,7 @@
       <!-- QUÍMICA GERAL -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-quimica-geral">
+        routerLink="/quimica-geral">
 
         <div class="imagem-card quimica-geral">
           <ion-icon name="flask-outline"></ion-icon>
@@ -79,7 +91,7 @@
       <!-- QUÍMICA ORGÂNICA -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-quimica-organica">
+        routerLink="/quimica-organica">
 
         <div class="imagem-card organica">
           <ion-icon name="git-branch-outline"></ion-icon>
@@ -111,7 +123,7 @@
       <!-- FÍSICO-QUÍMICA -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-fisico-quimica">
+        routerLink="/fisica-quimica">
 
         <div class="imagem-card fisico-quimica">
           <ion-icon name="thermometer-outline"></ion-icon>

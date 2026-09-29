@@ -1,3 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        text="Voltar"
+        defaultHref="/jogar">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+<ion-content>
 <ion-content>
 
   <div class="pagina">
@@ -47,7 +59,7 @@
       <!-- ÉTICA -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-etica">
+        routerLink="/etica">
 
         <div class="imagem-card etica">
           <ion-icon name="people-outline"></ion-icon>
@@ -79,7 +91,7 @@
       <!-- FILOSOFIA POLÍTICA -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-filosofia-politica">
+        routerLink="/filosofia-politica">
 
         <div class="imagem-card politica">
           <ion-icon name="scale-outline"></ion-icon>
@@ -111,7 +123,7 @@
       <!-- FILOSOFIA ANTIGA -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-filosofia-antiga">
+        routerLink="/filosofia-antiga">
 
         <div class="imagem-card antiga">
           <ion-icon name="library-outline"></ion-icon>

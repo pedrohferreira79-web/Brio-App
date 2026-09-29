@@ -1,3 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        text="Voltar"
+        defaultHref="/jogar">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+<ion-content>
 <ion-content>
 
   <div class="pagina">
@@ -47,7 +59,7 @@
       <!-- ÁLGEBRA -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-algebra">
+        routerLink="/algebra">
 
         <div class="imagem-card algebra">
           <ion-icon name="calculator-outline"></ion-icon>
@@ -66,7 +78,7 @@
         </ion-card-content>
 
         <div class="card-rodape">
-          <span>5 questões</span>
+          <span>10 questões</span>
 
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </div>
@@ -77,7 +89,7 @@
       <!-- GEOMETRIA -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-geometria">
+        routerLink="/geometria">
 
         <div class="imagem-card geometria">
           <ion-icon name="triangle-outline"></ion-icon>
@@ -96,7 +108,7 @@
         </ion-card-content>
 
         <div class="card-rodape">
-          <span>5 questões</span>
+          <span>10 questões</span>
 
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </div>
@@ -107,7 +119,7 @@
       <!-- FUNÇÕES -->
       <ion-card
         class="card-assunto"
-        routerLink="/exercicios-funcoes">
+        routerLink="/funcoes">
 
         <div class="imagem-card funcoes">
           <ion-icon name="analytics-outline"></ion-icon>
@@ -126,7 +138,7 @@
         </ion-card-content>
 
         <div class="card-rodape">
-          <span>5 questões</span>
+          <span>10 questões</span>
 
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </div>
