@@ -8,6 +8,7 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
 <ion-content [fullscreen]="true">
 <ion-content>
 <ion-content>
@@ -20,13 +21,19 @@
       <div class="titulo-materia">
         <h1>Matemática</h1>
         <p>Nível Intermediário</p>
-        <span>XP da matéria: 1.250</span>
+        <span>XP da matéria: {{ xpMateria }}</span>
       </div>
 
       <!-- PROGRESSO -->
       <div class="progresso-materia">
-        <div class="circulo-progresso">
-          <strong>46%</strong>
+        <div 
+          class="progresso-materia"
+          [style.--progresso]="progressoMatematica + '%'">
+
+          <div class="circulo-progresso">
+            <strong>{{ progressoMatematica }}%</strong>
+          </div>
+
         </div>
       </div>
 

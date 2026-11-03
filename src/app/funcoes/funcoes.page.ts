@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GamificationService } from '../services/gamification.service';
 
 @Component({
   selector: 'app-funcoes',
@@ -12,6 +13,10 @@ export class FuncoesPage {
   score = 0;
   correct = false;
   showAnswer = false;
+
+  constructor(
+    private gamificationService: GamificationService
+  ) { }
 
   quiz = [
 
@@ -163,7 +168,25 @@ export class FuncoesPage {
     if (option === this.quiz[this.perguntaAtual].answer) {
 
       this.score++;
+
+      this.gamificationService.adicionarXP(
+        'matematica',
+        5
+      );
+
+      // Registra o exercício concluído
+      this.gamificationService.adicionarExercicio();
+
       this.correct = true;
+
+      // Marca Funções como concluída ao atingir 10/10
+      if (this.score === this.quiz.length) {
+
+        this.gamificationService.concluirAssunto(
+          'funcoes'
+        );
+
+      }
 
     } else {
 

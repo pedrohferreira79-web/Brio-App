@@ -1,0 +1,154 @@
+/* ==============================
+   PÁGINA
+============================== */
+
+ion-content {
+  --background: #f7f7fb;
+}
+
+ion-toolbar {
+  --background: #ffffff;
+  --color: #333333;
+  --border-width: 0;
+}
+
+
+/* ==============================
+   CONTEÚDO
+============================== */
+
+.pagina-fotos {
+  width: 100%;
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  padding: 18px 14px 35px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
+.cabecalho-fotos {
+  margin-bottom: 22px;
+}
+
+.cabecalho-fotos h1 {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: 800;
+
+  color: #111827;
+}
+
+.cabecalho-fotos p {
+  margin: 6px 0 0;
+
+  font-size: 14px;
+  line-height: 19px;
+
+  color: #687085;
+}
+
+
+/* ==============================
+   GRADE DE FOTOS
+============================== */
+
+.lista-fotos {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+}
+
+
+/* ==============================
+   CARD
+============================== */
+
+.card-foto {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  padding: 6px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e5def2;
+
+  border-radius: 18px;
+
+  box-shadow: 0 5px 14px rgba(82, 39, 168, 0.08);
+}
+
+
+/* ==============================
+   ÁREA DA FOTO
+============================== */
+
+.area-foto {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f0edf5;
+
+  border-radius: 13px;
+
+  border: 2px dashed #d5cce2;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+
+/* ==============================
+   IMAGEM FUTURA
+============================== */
+
+.area-foto img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (max-width: 380px) {
+
+  .lista-fotos {
+    gap: 10px;
+  }
+
+  .card-foto {
+    padding: 5px;
+    border-radius: 15px;
+  }
+
+  .area-foto {
+    border-radius: 11px;
+  }
+
+}

@@ -135,6 +135,57 @@ ion-item {
 }
 
 
+/* ==============================
+   RECOMPENSA DA QUESTÃO
+============================== */
+
+.valor-pontos {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 2px;
+
+  margin-top: 2px;
+
+  padding: 7px 16px 3px;
+
+  text-align: center;
+
+  color: #315ee8;
+
+  font-weight: 800;
+}
+
+
+.recompensa-label {
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+
+  color: #7d96e8;
+}
+
+
+.valor-pontos strong {
+  font-size: 17px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.3px;
+
+  color: #315ee8;
+}
+
+
 /* FEEDBACK */
 
 .feedback-card {

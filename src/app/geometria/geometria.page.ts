@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GamificationService } from '../services/gamification.service';
 
 @Component({
   selector: 'app-geometria',
@@ -12,6 +13,10 @@ export class GeometriaPage {
   score = 0;
   correct = false;
   showAnswer = false;
+
+  constructor(
+    private gamificationService: GamificationService
+  ) { }
 
   quiz = [
 
@@ -150,7 +155,7 @@ export class GeometriaPage {
         '9 cm',
         '10 cm'
       ],
-      answer: 0,
+      answer: 2,
       feedbackCorrect: 'Correto! Área = comprimento × largura. Então 72 = 9 × largura, resultando em 8 cm.',
       feedbackIncorrect: 'Incorreto! Dividindo a área pelo comprimento: 72 ÷ 9 = 8 cm.'
     }
@@ -162,8 +167,28 @@ export class GeometriaPage {
 
     if (option === this.quiz[this.perguntaAtual].answer) {
 
+      // Aumenta a quantidade de acertos do quiz
       this.score++;
+
+      // Adiciona 5 XP para Matemática
+      this.gamificationService.adicionarXP(
+        'matematica',
+        5
+      );
+
+      // Registra o exercício concluído
+      this.gamificationService.adicionarExercicio();
+
       this.correct = true;
+
+      // Marca Geometria como concluída ao atingir 10/10
+      if (this.score === this.quiz.length) {
+
+        this.gamificationService.concluirAssunto(
+          'geometria'
+        );
+
+      }
 
     } else {
 

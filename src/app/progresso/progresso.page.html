@@ -18,21 +18,20 @@
   <!-- PERSONALIZAÇÃO DA FOTO -->
 <div class="card-personalizacao">
 
-  <div class="area-foto">
+  <div
+    class="area-foto"
+    routerLink="/molduras">
 
     <!--
       Espaço reservado para a foto do usuário.
       Quando o usuário escolher uma imagem,
       o src poderá ser alterado para a imagem escolhida.
     -->
+
     <img
-        class="moldura-personalizacao"
-  routerLink="/molduras">
-
-  <img
-    src="assets/molduraInicial.png"
-    alt="Molduras BRIO">
-
+      class="moldura-personalizacao"
+      src="assets/molduraInicial.png"
+      alt="Molduras BRIO">
 
   </div>
 
@@ -83,25 +82,28 @@
           Experiência
         </span>
 
-        <strong>
-          4.850 XP
-        </strong>
+        <strong> 
+  {{ xpTotal | number:'1.0-0' }} XP
+</strong>
 
       </div>
 
 
-      <div class="barra-xp">
-
-        <div class="xp-atual"></div>
-
-      </div>
+      <div class="barra-xp"> 
+ 
+  <div 
+    class="xp-atual"
+    [style.width.%]="porcentagemXP">
+  </div> 
+ 
+</div>
 
 
       <div class="xp-info">
 
-        <span>
-          4.850
-        </span>
+      <strong>
+  {{ xpTotal | number:'1.0-0' }} XP
+</strong>
 
         <span>
           100.000 XP
@@ -131,9 +133,9 @@
 
         <div>
 
-          <strong>
-            15 dias
-          </strong>
+         <strong>
+  {{ dias }} dias
+</strong>
 
           <p>
             Sequência atual
@@ -152,9 +154,9 @@
 
         <div>
 
-          <strong>
-            428
-          </strong>
+       <strong>
+  {{ exercicios }}
+</strong>
 
           <p>
             Exercícios concluídos
@@ -173,9 +175,9 @@
 
         <div>
 
-          <strong>
-            38h
-          </strong>
+       <strong>
+  {{ obterTempoFormatado() }}
+</strong>
 
           <p>
             Tempo estudado
@@ -195,8 +197,8 @@
         <div>
 
           <strong>
-            27
-          </strong>
+  {{ conquistas }}
+</strong>
 
           <p>
             Conquistas
@@ -215,9 +217,9 @@
 
         <div>
 
-          <strong>
-            1.250
-          </strong>
+         <strong>
+  {{ brioCoins | number:'1.0-0' }}
+</strong>
 
           <p>
             BRIO Coins

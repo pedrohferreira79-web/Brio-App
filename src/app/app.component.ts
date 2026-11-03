@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GamificationService } from './services/gamification.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,13 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class AppComponent {
-  constructor() {}
+
+  constructor(
+    private gamificationService: GamificationService
+  ) {
+
+    this.gamificationService.iniciarMonitoramento();
+
+  }
+
 }

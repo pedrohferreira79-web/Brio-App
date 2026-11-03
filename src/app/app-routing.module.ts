@@ -211,6 +211,26 @@ const routes: Routes = [
     path: 'cartografia',
     loadChildren: () => import('./cartografia/cartografia.module').then( m => m.CartografiaPageModule)
   },
+  {
+    path: 'desafio-matematica',
+    loadChildren: () => import('./desafio-matematica/desafio-matematica.module').then( m => m.DesafioMatematicaPageModule)
+  },
+  {
+    path: 'desafio-portugues',
+    loadChildren: () => import('./desafio-portugues/desafio-portugues.module').then( m => m.DesafioPortuguesPageModule)
+  },
+  {
+    path: 'desafio-fisica',
+    loadChildren: () => import('./desafio-fisica/desafio-fisica.module').then( m => m.DesafioFisicaPageModule)
+  },
+  {
+    path: 'recuperar',
+    loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
+  },
+  {
+    path: 'redefinir-senha',
+    loadChildren: () => import('./redefinir-senha/redefinir-senha.module').then( m => m.RedefinirSenhaPageModule)
+  },
 ];
 
 @NgModule({

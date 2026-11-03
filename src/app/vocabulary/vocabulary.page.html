@@ -1,13 +1,176 @@
 <ion-header [translucent]="true">
+
   <ion-toolbar>
-    <ion-title>vocabulary</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button
+        text="Voltar"
+        defaultHref="/home">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title>
+      Vocabulary
+    </ion-title>
+
   </ion-toolbar>
+
 </ion-header>
 
+
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">vocabulary</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <!-- QUESTÃO -->
+
+  <ion-card
+    class="quiz-card"
+    *ngIf="perguntaAtual < quiz.length && !showAnswer">
+
+    <ion-card-header>
+
+      <div class="contador">
+        EXERCISE {{ perguntaAtual + 1 }} OF {{ quiz.length }}
+      </div>
+
+      <ion-card-title>
+        {{ quiz[perguntaAtual].question }}
+      </ion-card-title>
+
+    </ion-card-header>
+
+
+    <ion-list>
+
+      <ion-item
+        *ngFor="let option of quiz[perguntaAtual].options; index as i"
+        lines="none">
+
+        <ion-button
+          class="option-button"
+          expand="block"
+          (click)="answer(i)">
+
+          <span class="letra">
+            {{ ['A', 'B', 'C', 'D', 'E'][i] }}
+          </span>
+
+          <span>
+            {{ option }}
+          </span>
+
+        </ion-button>
+
+      </ion-item>
+
+    </ion-list>
+
+  </ion-card>
+
+
+  <!-- FEEDBACK -->
+
+  <ion-card
+    class="feedback-card"
+    *ngIf="showAnswer">
+
+    <ion-card-header>
+
+      <ion-card-title
+        [class.correto]="correct"
+        [class.incorreto]="!correct">
+
+        {{ correct ? 'Correct answer!' : 'Incorrect answer!' }}
+
+      </ion-card-title>
+
+    </ion-card-header>
+
+
+    <ion-card-content>
+
+      <p>
+        {{ correct
+          ? quiz[perguntaAtual].feedbackCorrect
+          : quiz[perguntaAtual].feedbackIncorrect
+        }}
+      </p>
+
+
+      <ion-button
+        class="next-button"
+        expand="block"
+        (click)="nextQuestion()">
+
+        {{ perguntaAtual === quiz.length - 1
+          ? 'See result'
+          : 'Next exercise'
+        }}
+
+      </ion-button>
+
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <!-- RESULTADO -->
+
+  <ion-card
+    class="resultado-card"
+    *ngIf="perguntaAtual >= quiz.length">
+
+    <ion-card-header>
+
+      <div class="resultado-icon">
+        ✓
+      </div>
+
+      <ion-card-title>
+        Exercises completed!
+      </ion-card-title>
+
+    </ion-card-header>
+
+
+    <ion-card-content>
+
+      <div class="pontuacao">
+        {{ score }}/{{ quiz.length }}
+      </div>
+
+      <p class="texto-resultado">
+        You got {{ score }} out of {{ quiz.length }} exercises correct.
+      </p>
+
+
+      <p
+        class="mensagem"
+        *ngIf="score >= 8">
+
+        Excellent! Your English vocabulary is very strong.
+
+      </p>
+
+
+      <p
+        class="mensagem"
+        *ngIf="score >= 5 && score < 8">
+
+        Very good! Keep practicing to expand your vocabulary.
+
+      </p>
+
+
+      <p
+        class="mensagem"
+        *ngIf="score < 5">
+
+        Keep studying new words and expressions. You can improve!
+
+      </p>
+
+    </ion-card-content>
+
+  </ion-card>
+
 </ion-content>

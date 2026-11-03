@@ -1,0 +1,56 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text="Voltar"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recuperar senha</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <div class="recuperar-container">
+
+    <div class="titulo">
+      <h1>Esqueceu sua senha?</h1>
+      <p>
+        Informe o e-mail cadastrado para receber
+        um link de recuperação.
+      </p>
+    </div>
+
+    <form (ngSubmit)="enviarEmail()">
+
+      <ion-item>
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input
+          type="email"
+          name="email"
+          [(ngModel)]="email"
+          required
+          email>
+        </ion-input>
+      </ion-item>
+
+      <ion-button
+        expand="block"
+        type="submit"
+        class="ion-margin-top">
+        Enviar link de recuperação
+      </ion-button>
+
+    </form>
+
+      <ion-button
+        routerLink="/redefinir-senha"
+        expand="block"
+        type="submit"
+        class="ion-margin-top">
+        Enviar link de recuperação
+      </ion-button>
+
+  </div>
+
+</ion-content>
+

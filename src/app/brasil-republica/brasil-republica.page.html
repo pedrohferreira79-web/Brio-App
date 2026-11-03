@@ -1,13 +1,176 @@
 <ion-header [translucent]="true">
+
   <ion-toolbar>
-    <ion-title>brasil-republica</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button
+        text="Voltar"
+        defaultHref="/home">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title>
+      Brasil República
+    </ion-title>
+
   </ion-toolbar>
+
 </ion-header>
 
+
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">brasil-republica</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <!-- QUESTÃO -->
+
+  <ion-card
+    class="quiz-card"
+    *ngIf="perguntaAtual < quiz.length && !showAnswer">
+
+    <ion-card-header>
+
+      <div class="contador">
+        EXERCÍCIO {{ perguntaAtual + 1 }} DE {{ quiz.length }}
+      </div>
+
+      <ion-card-title>
+        {{ quiz[perguntaAtual].question }}
+      </ion-card-title>
+
+    </ion-card-header>
+
+
+    <ion-list>
+
+      <ion-item
+        *ngFor="let option of quiz[perguntaAtual].options; index as i"
+        lines="none">
+
+        <ion-button
+          class="option-button"
+          expand="block"
+          (click)="answer(i)">
+
+          <span class="letra">
+            {{ ['A', 'B', 'C', 'D', 'E'][i] }}
+          </span>
+
+          <span>
+            {{ option }}
+          </span>
+
+        </ion-button>
+
+      </ion-item>
+
+    </ion-list>
+
+  </ion-card>
+
+
+  <!-- FEEDBACK -->
+
+  <ion-card
+    class="feedback-card"
+    *ngIf="showAnswer">
+
+    <ion-card-header>
+
+      <ion-card-title
+        [class.correto]="correct"
+        [class.incorreto]="!correct">
+
+        {{ correct ? 'Resposta correta!' : 'Resposta incorreta!' }}
+
+      </ion-card-title>
+
+    </ion-card-header>
+
+
+    <ion-card-content>
+
+      <p>
+        {{ correct
+          ? quiz[perguntaAtual].feedbackCorrect
+          : quiz[perguntaAtual].feedbackIncorrect
+        }}
+      </p>
+
+
+      <ion-button
+        class="next-button"
+        expand="block"
+        (click)="nextQuestion()">
+
+        {{ perguntaAtual === quiz.length - 1
+          ? 'Ver resultado'
+          : 'Próximo exercício'
+        }}
+
+      </ion-button>
+
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <!-- RESULTADO -->
+
+  <ion-card
+    class="resultado-card"
+    *ngIf="perguntaAtual >= quiz.length">
+
+    <ion-card-header>
+
+      <div class="resultado-icon">
+        ✓
+      </div>
+
+      <ion-card-title>
+        Exercícios concluídos!
+      </ion-card-title>
+
+    </ion-card-header>
+
+
+    <ion-card-content>
+
+      <div class="pontuacao">
+        {{ score }}/{{ quiz.length }}
+      </div>
+
+      <p class="texto-resultado">
+        Você acertou {{ score }} de {{ quiz.length }} exercícios.
+      </p>
+
+
+      <p
+        class="mensagem"
+        *ngIf="score >= 8">
+
+        Excelente! Você demonstrou um ótimo conhecimento sobre a História do Brasil República.
+
+      </p>
+
+
+      <p
+        class="mensagem"
+        *ngIf="score >= 5 && score < 8">
+
+        Muito bem! Continue estudando os acontecimentos e transformações políticas do Brasil.
+
+      </p>
+
+
+      <p
+        class="mensagem"
+        *ngIf="score < 5">
+
+        Continue estudando! Revise os principais períodos da República brasileira e tente novamente.
+
+      </p>
+
+    </ion-card-content>
+
+  </ion-card>
+
 </ion-content>

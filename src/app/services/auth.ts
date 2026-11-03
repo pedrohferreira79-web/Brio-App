@@ -33,4 +33,16 @@ export class AuthService {
     const { data } = await this.supabase.auth.getUser();
     return data.user;
   }
+ 
+  async recuperarSenha(email: string) {
+  const { error } = await this.supabase.auth.resetPasswordForEmail(
+    email,
+    {
+      redirectTo: window.location.origin + '/redefinir-senha'
+    }
+  );
+
+  if (error) throw error;
+}
+
 }

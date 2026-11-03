@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GamificationService } from '../services/gamification.service';
 
 @Component({
   selector: 'app-algebra',
@@ -8,10 +9,16 @@ import { Component } from '@angular/core';
 })
 export class AlgebraPage {
 
+
   perguntaAtual = 0;
   score = 0;
+  points = 0;
   correct = false;
   showAnswer = false;
+
+    constructor(
+    private gamificationService: GamificationService
+  ) {}
 
   quiz = [
 
@@ -168,28 +175,46 @@ export class AlgebraPage {
   ];
 
 
-  answer(option: number) {
+ answer(option: number) {
 
-    if (option === this.quiz[this.perguntaAtual].answer) {
+  this.gamificationService.adicionarExercicio();
 
-      this.score++;
-      this.correct = true;
+  if (option === this.quiz[this.perguntaAtual].answer) {
 
-    } else {
+    this.score++;
 
-      this.correct = false;
+    this.points += 5;
 
-    }
+    this.gamificationService.adicionarXP('matematica', 5);
 
-    this.showAnswer = true;
+    this.correct = true;
+
+  } else {
+
+    this.correct = false;
+
   }
 
+  this.showAnswer = true;
+}
 
   nextQuestion() {
 
-    this.perguntaAtual++;
-    this.showAnswer = false;
+  // Se terminou o quiz com 10/10,
+  // Álgebra é considerada concluída.
+
+  if (
+    this.perguntaAtual === this.quiz.length - 1 &&
+    this.score === this.quiz.length
+  ) {
+
+    this.gamificationService.concluirAssunto('algebra');
 
   }
+
+  this.perguntaAtual++;
+  this.showAnswer = false;
+
+}
 
 }
