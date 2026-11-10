@@ -1,0 +1,121 @@
+
+ion-content {
+  --background: #ffffff;
+}
+
+/* Cabeçalho */
+ion-header ion-toolbar {
+  --background: #ffffff;
+  --color: #39245e;
+  --border-color: #eeeeee;
+}
+
+ion-title {
+  color: #39245e;
+  font-size: 21px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Centralização do conteúdo */
+ion-content::part(scroll) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 18px;
+}
+
+form {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* Campos */
+ion-item {
+  --color: #393044;
+  --border-radius: 13px;
+  --padding-start: 13px;
+  --inner-padding-end: 12px;
+
+  margin-bottom: 12px;
+  border: 1px solid;
+  border-radius: 13px;
+  min-height: 52px;
+}
+
+/* Campo de e-mail - Amarelo */
+form ion-item:nth-of-type(1) {
+  --background: #fff9e8;
+  --highlight-color-focused: #e5b52e;
+
+  border-color: #f1d77f;
+}
+
+/* Campo de senha - Azul */
+form ion-item:nth-of-type(2) {
+  --background: #edf6ff;
+  --highlight-color-focused: #388bd5;
+
+  border-color: #a9d2f5;
+}
+
+/* Campo de confirmar senha - Vermelho */
+form ion-item:nth-of-type(3) {
+  --background: #fff0f0;
+  --highlight-color-focused: #df5b5b;
+
+  border-color: #f2b2b2;
+}
+
+/* Textos dos campos */
+ion-label {
+  --color: #604b7c !important;
+}
+
+ion-input {
+  --color: #39245e;
+  --placeholder-color: #9d93a9;
+  font-size: 14px;
+}
+
+/* Mensagens de erro */
+ion-text[color="danger"] p {
+  margin: 3px 5px 12px;
+  font-size: 12px;
+}
+
+/* Botão cadastrar - Quatro cores */
+form ion-button {
+  --background: linear-gradient(
+    100deg,
+    #f2c13b 0%,
+    #398bd5 35%,
+    #e45151 68%,
+    #f39a35 100%
+  );
+
+  --background-hover: #7843c5;
+  --background-activated: #6334a9;
+  --color: #ffffff;
+  --border-radius: 13px;
+  --box-shadow: 0 5px 13px rgba(80, 60, 120, 0.18);
+
+  height: 51px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  margin-top: 18px;
+}
+
+/* Botão já tenho conta */
+ion-content > ion-button {
+  --background: transparent;
+  --color: #7843c5;
+  --box-shadow: none;
+
+  width: 100%;
+  max-width: 420px;
+  margin: 8px auto 0;
+  font-size: 13px;
+  font-weight: 700;
+}

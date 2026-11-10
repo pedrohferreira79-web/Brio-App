@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { createClient, SupabaseClient, User } from '@supabase/supabase-js';
 import { environment } from '../../environments/environment';
@@ -6,6 +7,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class AuthService {
+
   private supabase: SupabaseClient;
 
   constructor() {
@@ -13,19 +15,28 @@ export class AuthService {
   }
 
   async signUp(email: string, senha: string) {
-    const { data, error } = await this.supabase.auth.signUp({ email, password: senha });
+    const { data, error } = await this.supabase.auth.signUp({
+      email,
+      password: senha
+    });
+
     if (error) throw error;
     return data;
   }
 
   async signIn(email: string, senha: string) {
-    const { data, error } = await this.supabase.auth.signInWithPassword({ email, password: senha });
+    const { data, error } = await this.supabase.auth.signInWithPassword({
+      email,
+      password: senha
+    });
+
     if (error) throw error;
     return data;
   }
 
   async signOut() {
     const { error } = await this.supabase.auth.signOut();
+
     if (error) throw error;
   }
 
@@ -33,16 +44,25 @@ export class AuthService {
     const { data } = await this.supabase.auth.getUser();
     return data.user;
   }
- 
-  async recuperarSenha(email: string) {
-  const { error } = await this.supabase.auth.resetPasswordForEmail(
-    email,
-    {
-      redirectTo: window.location.origin + '/redefinir-senha'
-    }
-  );
 
-  if (error) throw error;
-}
+  async recuperarSenha(email: string) {
+    const { error } = await this.supabase.auth.resetPasswordForEmail(
+      email,
+      {
+        redirectTo: window.location.origin + '/redefinir-senha'
+      }
+    );
+
+    if (error) throw error;
+  }
+
+  // NOVO MÉTODO: atualizar a senha do usuário
+  async atualizarSenha(novaSenha: string) {
+    const { error } = await this.supabase.auth.updateUser({
+      password: novaSenha
+    });
+
+    if (error) throw error;
+  }
 
 }

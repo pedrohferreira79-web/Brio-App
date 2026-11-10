@@ -20,6 +20,7 @@ export class RecuperarPage {
   ) {}
 
   async enviarEmail() {
+
     if (!this.email.trim()) {
       const alert = await this.alertController.create({
         header: 'Atenção',
@@ -51,6 +52,7 @@ export class RecuperarPage {
       await alert.present();
 
     } catch (error: any) {
+
       await loading.dismiss();
 
       const alert = await this.alertController.create({
@@ -63,4 +65,3 @@ export class RecuperarPage {
     }
   }
 }
-

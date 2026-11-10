@@ -10,38 +10,15 @@ export class GamificationService {
   // ==============================
 
   private readonly XP_KEY = 'xp_materias';
-
-  private readonly STATS_KEY =
-    'estatisticas_gamificacao';
-
-  private readonly PROGRESSO_KEY =
-    'progresso_matematica';
-
+  private readonly STATS_KEY = 'estatisticas_gamificacao';
+  private readonly PROGRESSO_KEY = 'progresso_materias';
+  private readonly PROGRESSO_ANTIGO_KEY = 'progresso_matematica';
 
   // ==============================
   // XP POR MATÉRIA
   // ==============================
 
-  /*
-   * Todas as matérias existentes no aplicativo.
-   *
-   * Por enquanto, somente Matemática está sendo
-   * utilizada efetivamente pelos quizzes.
-   */
-
-  private xpMaterias: {
-    matematica: number;
-    portugues: number;
-    biologia: number;
-    geografia: number;
-    fisica: number;
-    quimica: number;
-    ingles: number;
-    filosofia: number;
-    historia: number;
-    artes: number;
-  } = {
-
+  private xpMaterias: Record<string, number> = {
     matematica: 0,
     portugues: 0,
     biologia: 0,
@@ -52,97 +29,54 @@ export class GamificationService {
     filosofia: 0,
     historia: 0,
     artes: 0
-
   };
-
 
   // ==============================
   // ESTATÍSTICAS GERAIS
   // ==============================
 
   private estatisticas = {
-
     dias: 0,
-
     exercicios: 0,
-
     tempoMinutos: 0,
-
     conquistas: 0,
-
     brioCoins: 0
-
   };
 
+  // ==============================
+  // PROGRESSO DAS MATÉRIAS
+  // ==============================
+
+  private progresso: Record<string, Record<string, boolean>> = {};
 
   // ==============================
-  // PROGRESSO DE MATEMÁTICA
+  // ASSUNTOS CADASTRADOS
   // ==============================
 
-  /*
-   * Cada assunto vale 1/3 da matéria.
-   *
-   * Álgebra    = 33%
-   * Geometria  = 33%
-   * Funções    = 33%
-   *
-   * Só é concluído quando o aluno
-   * fizer 10/10 naquele assunto.
-   */
-
-  private assuntosConcluidos = {
-
-    algebra: false,
-
-    geometria: false,
-
-    funcoes: false
-
+  private assuntosConfigurados: Record<string, string[]> = {
+    matematica: [
+      'algebra',
+      'geometria',
+      'funcoes'
+    ]
   };
-
 
   // ==============================
   // CONTROLE DO TEMPO
   // ==============================
 
   private segundosSessao = 0;
-
   private intervalo: any = null;
-
   private monitorando = false;
-
 
   // ==============================
   // CONSTRUTOR
   // ==============================
 
   constructor() {
-
     this.carregarDados();
-
-
-    // Carrega o progresso de Matemática
-
-    const progressoSalvo =
-      localStorage.getItem(
-        this.PROGRESSO_KEY
-      );
-
-
-    if (progressoSalvo) {
-
-      this.assuntosConcluidos = {
-
-        ...this.assuntosConcluidos,
-
-        ...JSON.parse(progressoSalvo)
-
-      };
-
-    }
-
+    this.carregarProgresso();
   }
-
 
   // ==============================
   // CARREGAR DADOS
@@ -150,55 +84,64 @@ export class GamificationService {
 
   private carregarDados() {
 
-    // ------------------------------
     // XP
-    // ------------------------------
-
-    const xpSalvo =
-      localStorage.getItem(
-        this.XP_KEY
-      );
-
+    const xpSalvo = localStorage.getItem(this.XP_KEY);
 
     if (xpSalvo) {
-
       this.xpMaterias = {
-
         ...this.xpMaterias,
-
         ...JSON.parse(xpSalvo)
-
       };
-
     }
 
-
-    // ------------------------------
     // ESTATÍSTICAS
-    // ------------------------------
-
     const estatisticasSalvas =
-      localStorage.getItem(
-        this.STATS_KEY
-      );
-
+      localStorage.getItem(this.STATS_KEY);
 
     if (estatisticasSalvas) {
-
       this.estatisticas = {
-
         ...this.estatisticas,
-
-        ...JSON.parse(
-          estatisticasSalvas
-        )
-
+        ...JSON.parse(estatisticasSalvas)
       };
-
     }
-
   }
 
+  // ==============================
+  // CARREGAR PROGRESSO
+  // ==============================
+
+  private carregarProgresso() {
+
+    const progressoNovo =
+      localStorage.getItem(this.PROGRESSO_KEY);
+
+    const progressoAntigo =
+      localStorage.getItem(this.PROGRESSO_ANTIGO_KEY);
+
+    if (progressoNovo) {
+
+      this.progresso = JSON.parse(progressoNovo);
+
+    } else if (progressoAntigo) {
+
+      // Migra o progresso antigo de Matemática.
+
+      this.progresso['matematica'] =
+        JSON.parse(progressoAntigo);
+
+      this.salvarProgresso();
+    }
+
+    // Garante que Matemática tenha seus três assuntos.
+
+    this.assuntosConfigurados['matematica'].forEach(assunto => {
+
+      this.progresso['matematica'] ??= {};
+
+      this.progresso['matematica'][assunto] ??= false;
+
+    });
+  }
 
   // ==============================
   // SALVAR XP
@@ -207,17 +150,11 @@ export class GamificationService {
   private salvarXP() {
 
     localStorage.setItem(
-
       this.XP_KEY,
-
-      JSON.stringify(
-        this.xpMaterias
-      )
-
+      JSON.stringify(this.xpMaterias)
     );
 
   }
-
 
   // ==============================
   // SALVAR ESTATÍSTICAS
@@ -226,122 +163,74 @@ export class GamificationService {
   private salvarEstatisticas() {
 
     localStorage.setItem(
-
       this.STATS_KEY,
-
-      JSON.stringify(
-        this.estatisticas
-      )
-
+      JSON.stringify(this.estatisticas)
     );
 
   }
 
+  // ==============================
+  // SALVAR PROGRESSO
+  // ==============================
+
+  private salvarProgresso() {
+
+    localStorage.setItem(
+      this.PROGRESSO_KEY,
+      JSON.stringify(this.progresso)
+    );
+
+  }
 
   // ==============================
-  // XP
+  // ADICIONAR XP
   // ==============================
 
-  /*
-   * Adiciona XP para uma matéria.
-   *
-   * Exemplo:
-   *
-   * adicionarXP('matematica', 5);
-   *
-   * O XP pode ser ganho infinitamente.
-   */
-
-  adicionarXP(
-    materia: string,
-    quantidade: number
-  ) {
+  adicionarXP(materia: string, quantidade: number) {
 
     if (
-      !(materia in this.xpMaterias)
+      !materia ||
+      !Number.isFinite(quantidade) ||
+      quantidade <= 0
     ) {
-
-      console.warn(
-        `Matéria "${materia}" não cadastrada no sistema de XP.`
-      );
-
       return;
-
     }
 
+    // Cadastra automaticamente uma matéria nova.
 
-    const chave =
-      materia as keyof typeof this.xpMaterias;
+    this.xpMaterias[materia] ??= 0;
 
-
-    this.xpMaterias[chave] +=
-      quantidade;
-
+    this.xpMaterias[materia] += quantidade;
 
     this.salvarXP();
 
   }
 
-
   // ==============================
   // OBTER XP DA MATÉRIA
   // ==============================
 
-  obterXP(
-    materia: string
-  ): number {
+  obterXP(materia: string): number {
 
-    if (
-      !(materia in this.xpMaterias)
-    ) {
-
-      return 0;
-
-    }
-
-
-    const chave =
-      materia as keyof typeof this.xpMaterias;
-
-
-    return this.xpMaterias[chave];
+    return this.xpMaterias[materia] ?? 0;
 
   }
-
 
   // ==============================
   // OBTER XP TOTAL
   // ==============================
 
-  /*
-   * Soma o XP de todas as matérias.
-   *
-   * É esse valor que será usado:
-   *
-   * - Página de Progresso
-   * - Loja BRIO
-   * - Perfil
-   * - Barra geral de XP
-   */
-
   obterXPTotal(): number {
 
-    return Object.values(
-      this.xpMaterias
-    ).reduce(
-
-      (total, xp) =>
-        total + xp,
-
+    return Object.values(this.xpMaterias).reduce(
+      (total, xp) => total + xp,
       0
-
     );
 
   }
 
-
   // ==============================
-  // EXERCÍCIOS
+  // ADICIONAR EXERCÍCIO
   // ==============================
 
   adicionarExercicio() {
@@ -352,6 +241,9 @@ export class GamificationService {
 
   }
 
+  // ==============================
+  // OBTER EXERCÍCIOS
+  // ==============================
 
   obterExercicios(): number {
 
@@ -359,66 +251,223 @@ export class GamificationService {
 
   }
 
+  // ==============================
+  // CONFIGURAR ASSUNTOS
+  // ==============================
+
+  /*
+   * Exemplo:
+   *
+   * definirAssuntos('portugues', [
+   *   'gramatica',
+   *   'literatura',
+   *   'interpretacao'
+   * ]);
+   */
+
+  definirAssuntos(materia: string, assuntos: string[]) {
+
+    if (
+      !materia ||
+      !Array.isArray(assuntos)
+    ) {
+      return;
+    }
+
+    this.assuntosConfigurados[materia] = [
+      ...new Set(assuntos)
+    ];
+
+    this.progresso[materia] ??= {};
+
+    this.assuntosConfigurados[materia].forEach(assunto => {
+
+      this.progresso[materia][assunto] ??= false;
+
+    });
+
+    this.salvarProgresso();
+
+  }
 
   // ==============================
-  // DIAS DE ESTUDO
+  // OBTER ASSUNTOS
+  // ==============================
+
+  obterAssuntos(materia: string): string[] {
+
+    return this.assuntosConfigurados[materia] ?? [];
+
+  }
+
+  // ==============================
+  // CONCLUIR ASSUNTO
+  // ==============================
+
+  /*
+   * Novo formato:
+   *
+   * concluirAssunto('portugues', 'gramatica');
+   *
+   * Formato antigo de Matemática:
+   *
+   * concluirAssunto('geometria');
+   */
+
+  concluirAssunto(materia: string, assunto?: string) {
+
+    // Compatibilidade com as páginas antigas de Matemática.
+
+    if (!assunto) {
+
+      const assuntosMatematica = [
+        'algebra',
+        'geometria',
+        'funcoes'
+      ];
+
+      if (assuntosMatematica.includes(materia)) {
+
+        assunto = materia;
+        materia = 'matematica';
+
+      } else {
+
+        return;
+
+      }
+    }
+
+    this.progresso[materia] ??= {};
+
+    this.progresso[materia][assunto] = true;
+
+    // Cadastra automaticamente assuntos novos.
+
+    if (!this.assuntosConfigurados[materia]) {
+
+      this.assuntosConfigurados[materia] = [];
+
+    }
+
+    if (
+      !this.assuntosConfigurados[materia].includes(assunto)
+    ) {
+
+      this.assuntosConfigurados[materia].push(assunto);
+
+    }
+
+    this.salvarProgresso();
+
+  }
+
+  // ==============================
+  // VERIFICAR ASSUNTO CONCLUÍDO
+  // ==============================
+
+  assuntoConcluido(
+    materia: string,
+    assunto: string
+  ): boolean {
+
+    return this.progresso[materia]?.[assunto] ?? false;
+
+  }
+
+  // ==============================
+  // OBTER PROGRESSO DA MATÉRIA
+  // ==============================
+
+  obterProgresso(materia: string): number {
+
+    const assuntos =
+      this.assuntosConfigurados[materia] ?? [];
+
+    if (assuntos.length === 0) {
+      return 0;
+    }
+
+    const concluidos = assuntos.filter(
+      assunto =>
+        this.progresso[materia]?.[assunto] === true
+    ).length;
+
+    return Math.round(
+      (concluidos / assuntos.length) * 100
+    );
+
+  }
+
+  // ==============================
+  // PROGRESSO DE TODAS AS MATÉRIAS
+  // ==============================
+
+  obterProgressoTodasMaterias(): Record<string, number> {
+
+    const resultado: Record<string, number> = {};
+
+    Object.keys(this.assuntosConfigurados).forEach(materia => {
+
+      resultado[materia] = this.obterProgresso(materia);
+
+    });
+
+    return resultado;
+
+  }
+
+  // ==============================
+  // COMPATIBILIDADE COM MATEMÁTICA
+  // ==============================
+
+  obterProgressoMatematica(): number {
+
+    return this.obterProgresso('matematica');
+
+  }
+
+  // ==============================
+  // DATA ATUAL
   // ==============================
 
   private obterDataAtual(): string {
 
     const agora = new Date();
 
+    const ano = agora.getFullYear();
 
-    const ano =
-      agora.getFullYear();
+    const mes = String(
+      agora.getMonth() + 1
+    ).padStart(2, '0');
 
-
-    const mes =
-      String(
-        agora.getMonth() + 1
-      ).padStart(2, '0');
-
-
-    const dia =
-      String(
-        agora.getDate()
-      ).padStart(2, '0');
-
+    const dia = String(
+      agora.getDate()
+    ).padStart(2, '0');
 
     return `${ano}-${mes}-${dia}`;
 
   }
 
+  // ==============================
+  // REGISTRAR DIA DE ESTUDO
+  // ==============================
 
   private registrarDiaEstudo() {
 
-    const hoje =
-      this.obterDataAtual();
-
+    const hoje = this.obterDataAtual();
 
     const ultimoDia =
-      localStorage.getItem(
-        'ultimo_dia_estudo'
-      );
+      localStorage.getItem('ultimo_dia_estudo');
 
-
-    // Se ainda não estudou hoje
-
-    if (
-      ultimoDia !== hoje
-    ) {
+    if (ultimoDia !== hoje) {
 
       this.estatisticas.dias++;
 
-
       localStorage.setItem(
-
         'ultimo_dia_estudo',
-
         hoje
-
       );
-
 
       this.salvarEstatisticas();
 
@@ -426,6 +475,9 @@ export class GamificationService {
 
   }
 
+  // ==============================
+  // OBTER DIAS
+  // ==============================
 
   obterDias(): number {
 
@@ -433,34 +485,22 @@ export class GamificationService {
 
   }
 
-
   // ==============================
-  // TEMPO DE ESTUDO
+  // INICIAR MONITORAMENTO
   // ==============================
 
   iniciarMonitoramento() {
 
     if (this.monitorando) {
-
       return;
-
     }
-
 
     this.monitorando = true;
 
-
     document.addEventListener(
-
       'visibilitychange',
-
       this.verificarVisibilidade
-
     );
-
-
-    // Começa imediatamente
-    // se o aplicativo estiver visível
 
     if (!document.hidden) {
 
@@ -470,6 +510,9 @@ export class GamificationService {
 
   }
 
+  // ==============================
+  // VERIFICAR VISIBILIDADE
+  // ==============================
 
   private verificarVisibilidade = () => {
 
@@ -485,64 +528,45 @@ export class GamificationService {
 
   };
 
+  // ==============================
+  // INICIAR CONTAGEM
+  // ==============================
 
   private iniciarContagem() {
 
-    if (
-      this.intervalo !== null
-    ) {
-
+    if (this.intervalo !== null) {
       return;
-
     }
 
+    this.intervalo = setInterval(() => {
 
-    this.intervalo =
-      setInterval(() => {
+      this.segundosSessao++;
 
+      if (this.segundosSessao >= 60) {
 
-        this.segundosSessao++;
+        this.segundosSessao = 0;
 
+        this.estatisticas.tempoMinutos++;
 
-        // A cada 60 segundos
+        this.salvarEstatisticas();
 
-        if (
-          this.segundosSessao >= 60
-        ) {
+        this.registrarDiaEstudo();
 
-          this.segundosSessao = 0;
+      }
 
-
-          this.estatisticas
-            .tempoMinutos++;
-
-
-          this.salvarEstatisticas();
-
-
-          // Registra o dia como
-          // dia estudado
-
-          this.registrarDiaEstudo();
-
-        }
-
-
-      }, 1000);
+    }, 1000);
 
   }
 
+  // ==============================
+  // PARAR CONTAGEM
+  // ==============================
 
   private pararContagem() {
 
-    if (
-      this.intervalo !== null
-    ) {
+    if (this.intervalo !== null) {
 
-      clearInterval(
-        this.intervalo
-      );
-
+      clearInterval(this.intervalo);
 
       this.intervalo = null;
 
@@ -550,14 +574,15 @@ export class GamificationService {
 
   }
 
+  // ==============================
+  // OBTER TEMPO DE ESTUDO
+  // ==============================
 
   obterTempoMinutos(): number {
 
-    return this.estatisticas
-      .tempoMinutos;
+    return this.estatisticas.tempoMinutos;
 
   }
-
 
   // ==============================
   // CONQUISTAS
@@ -565,11 +590,9 @@ export class GamificationService {
 
   obterConquistas(): number {
 
-    return this.estatisticas
-      .conquistas;
+    return this.estatisticas.conquistas;
 
   }
-
 
   // ==============================
   // BRIO COINS
@@ -577,119 +600,8 @@ export class GamificationService {
 
   obterBrioCoins(): number {
 
-    return this.estatisticas
-      .brioCoins;
+    return this.estatisticas.brioCoins;
 
   }
-
-
-  // ==============================
-  // PROGRESSO DE MATEMÁTICA
-  // ==============================
-
-  /*
-   * Marca um assunto como concluído.
-   *
-   * Só deve ser chamado quando
-   * o aluno atingir 10/10.
-   */
-
-  concluirAssunto(
-    materia: string
-  ) {
-
-    if (
-
-      materia !== 'algebra' &&
-
-      materia !== 'geometria' &&
-
-      materia !== 'funcoes'
-
-    ) {
-
-      return;
-
-    }
-
-
-    const chave =
-      materia as keyof
-      typeof this.assuntosConcluidos;
-
-
-    // Se já estiver concluído,
-    // não faz nada.
-
-    if (
-      this.assuntosConcluidos[chave]
-    ) {
-
-      return;
-
-    }
-
-
-    this.assuntosConcluidos[chave] =
-      true;
-
-
-    localStorage.setItem(
-
-      this.PROGRESSO_KEY,
-
-      JSON.stringify(
-        this.assuntosConcluidos
-      )
-
-    );
-
-  }
-
-
-  // ==============================
-  // OBTER PROGRESSO DE MATEMÁTICA
-  // ==============================
-
-  obterProgressoMatematica(): number {
-
-    let concluidos = 0;
-
-
-    if (
-      this.assuntosConcluidos.algebra
-    ) {
-
-      concluidos++;
-
-    }
-
-
-    if (
-      this.assuntosConcluidos.geometria
-    ) {
-
-      concluidos++;
-
-    }
-
-
-    if (
-      this.assuntosConcluidos.funcoes
-    ) {
-
-      concluidos++;
-
-    }
-
-
-    return Math.round(
-
-      (concluidos / 3) * 100
-
-    );
-
-  }
-
 
 }

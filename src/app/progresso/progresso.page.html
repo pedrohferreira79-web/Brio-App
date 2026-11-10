@@ -6,41 +6,32 @@
         defaultHref="/inicio">
       </ion-back-button>
     </ion-buttons>
-
   </ion-toolbar>
 </ion-header>
-<ion-content [fullscreen]="true">
 
-<ion-content>
+<ion-content [fullscreen]="true">
 
   <div class="conteudo">
 
-  <!-- PERSONALIZAÇÃO DA FOTO -->
-<div class="card-personalizacao">
+    <!-- PERSONALIZAÇÃO DA FOTO -->
 
-  <div
-    class="area-foto"
-    routerLink="/molduras">
+    <div class="card-personalizacao">
 
-    <!--
-      Espaço reservado para a foto do usuário.
-      Quando o usuário escolher uma imagem,
-      o src poderá ser alterado para a imagem escolhida.
-    -->
+      <div
+        class="area-foto"
+        routerLink="/molduras">
 
-    <img
-      class="moldura-personalizacao"
-      src="assets/molduraInicial.png"
-      alt="Molduras BRIO">
+        <img
+          class="moldura-personalizacao"
+          src="assets/molduraInicial.png"
+          alt="Molduras BRIO">
 
-  </div>
+      </div>
 
-</div>
+    </div>
 
 
-    <!-- ==============================
-         PERFIL
-    =============================== -->
+    <!-- PERFIL -->
 
     <div class="perfil">
 
@@ -58,7 +49,6 @@
 
       </div>
 
-
       <button
         class="foto-perfil"
         routerLink="/fotos-perfil">
@@ -70,9 +60,7 @@
     </div>
 
 
-    <!-- ==============================
-         XP
-    =============================== -->
+    <!-- XP -->
 
     <div class="xp-card">
 
@@ -82,28 +70,26 @@
           Experiência
         </span>
 
-        <strong> 
-  {{ xpTotal | number:'1.0-0' }} XP
-</strong>
+        <strong>
+          {{ xpTotal | number:'1.0-0' }} XP
+        </strong>
 
       </div>
 
+      <div class="barra-xp">
 
-      <div class="barra-xp"> 
- 
-  <div 
-    class="xp-atual"
-    [style.width.%]="porcentagemXP">
-  </div> 
- 
-</div>
+        <div
+          class="xp-atual"
+          [style.width.%]="porcentagemXP">
+        </div>
 
+      </div>
 
       <div class="xp-info">
 
-      <strong>
-  {{ xpTotal | number:'1.0-0' }} XP
-</strong>
+        <strong>
+          {{ xpTotal | number:'1.0-0' }} XP
+        </strong>
 
         <span>
           100.000 XP
@@ -114,14 +100,11 @@
     </div>
 
 
-    <!-- ==============================
-         RESUMO GERAL
-    =============================== -->
+    <!-- RESUMO GERAL -->
 
     <h2>
       Resumo Geral
     </h2>
-
 
     <div class="resumo">
 
@@ -133,9 +116,9 @@
 
         <div>
 
-         <strong>
-  {{ dias }} dias
-</strong>
+          <strong>
+            {{ dias }} dias
+          </strong>
 
           <p>
             Sequência atual
@@ -154,9 +137,9 @@
 
         <div>
 
-       <strong>
-  {{ exercicios }}
-</strong>
+          <strong>
+            {{ exercicios }}
+          </strong>
 
           <p>
             Exercícios concluídos
@@ -175,9 +158,9 @@
 
         <div>
 
-       <strong>
-  {{ obterTempoFormatado() }}
-</strong>
+          <strong>
+            {{ obterTempoFormatado() }}
+          </strong>
 
           <p>
             Tempo estudado
@@ -197,8 +180,8 @@
         <div>
 
           <strong>
-  {{ conquistas }}
-</strong>
+            {{ conquistas }}
+          </strong>
 
           <p>
             Conquistas
@@ -217,9 +200,9 @@
 
         <div>
 
-         <strong>
-  {{ brioCoins | number:'1.0-0' }}
-</strong>
+          <strong>
+            {{ brioCoins | number:'1.0-0' }}
+          </strong>
 
           <p>
             BRIO Coins
@@ -232,9 +215,7 @@
     </div>
 
 
-    <!-- ==============================
-         CONQUISTAS
-    =============================== -->
+    <!-- CONQUISTAS -->
 
     <div class="titulo-secao">
 
@@ -325,115 +306,57 @@
     </div>
 
 
-    <!-- ==============================
-         DESEMPENHO
-    =============================== -->
+    <!-- DESEMPENHO POR MATÉRIA -->
 
     <h2>
       📚 Desempenho por Matéria
     </h2>
 
+    <div class="materias-desempenho">
 
-    <div class="materia">
+      <div
+        class="materia"
+        *ngFor="let materia of materiasDesempenho">
 
-      <div class="materia-topo">
+        <div class="materia-topo">
 
-        <span>
-          Matemática
-        </span>
+          <span>
+            {{ materia.nome }}
+          </span>
 
-        <strong>
-          82%
-        </strong>
+          <strong>
+            {{ materia.progresso }}%
+          </strong>
 
-      </div>
+        </div>
 
-      <div class="barra-materia">
+        <div class="barra-materia">
 
-        <div class="matematica"></div>
+          <div
+            [ngClass]="materia.classe"
+            [style.width.%]="materia.progresso">
+          </div>
 
-      </div>
+        </div>
 
-    </div>
+        <div class="materia-xp">
 
+          <span>
+            {{ materia.xp | number:'1.0-0' }} XP
+          </span>
 
-    <div class="materia">
-
-      <div class="materia-topo">
-
-        <span>
-          Língua Portuguesa
-        </span>
-
-        <strong>
-          76%
-        </strong>
-
-      </div>
-
-      <div class="barra-materia">
-
-        <div class="portugues"></div>
+        </div>
 
       </div>
 
     </div>
 
 
-    <div class="materia">
-
-      <div class="materia-topo">
-
-        <span>
-          Biologia
-        </span>
-
-        <strong>
-          68%
-        </strong>
-
-      </div>
-
-      <div class="barra-materia">
-
-        <div class="biologia"></div>
-
-      </div>
-
-    </div>
-
-
-    <div class="materia">
-
-      <div class="materia-topo">
-
-        <span>
-          História
-        </span>
-
-        <strong>
-          91%
-        </strong>
-
-      </div>
-
-      <div class="barra-materia">
-
-        <div class="historia"></div>
-
-      </div>
-
-    </div>
-
-
-    <!-- ==============================
-         PERCURSO
-    =============================== -->
+    <!-- PERCURSO -->
 
     <h2>
       Seu percurso
     </h2>
-
 
     <div class="percurso">
 
